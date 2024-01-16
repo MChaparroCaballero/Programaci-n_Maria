@@ -11,8 +11,8 @@ public class Uso_deProducto {
 		 * 
 		 */
 
-		Producto peras = new Producto();
-		peras.set_nombre("Peras");
+		Producto peras = new Producto();//instanciamos//
+		peras.set_nombre("Peras");//los nuevos valores del setter//
 		peras.set_precio(1.76);
 		peras.set_stock(30);
 
