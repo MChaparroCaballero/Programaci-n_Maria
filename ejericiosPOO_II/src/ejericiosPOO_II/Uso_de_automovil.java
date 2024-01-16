@@ -11,9 +11,12 @@ public class Uso_de_automovil {
 		 */
 
 		
-		Automovil nuevo = new Automovil();
-		nuevo.set_marcas("honda");
-		nuevo.set_modelo("impala");
+		Automovil nuevo = new Automovil();//instanciamos//
+		
+		//ponemos los nuevos valores del setter//
+		nuevo.set_marcas("Honda");
+		nuevo.set_modelo("Honda Civic");
+		
 		System.out.println("La marca del automovil " + nuevo.get_marcas());
 		System.out.println("El modelo del automovil " + nuevo.get_modelo());
 		

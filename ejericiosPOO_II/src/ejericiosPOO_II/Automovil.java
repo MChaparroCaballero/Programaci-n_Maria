@@ -1,30 +1,29 @@
 package ejericiosPOO_II;
 
-public class Automovil {
+public class Automovil {//atributos//
 	
 	private String marcas;
 	private String modelo;
 	
 	
-	Automovil(){
+	Automovil(){//constructor//
 		marcas= "ford";
 		modelo= "mustang";
 	}
 	
-	public void set_marcas (String nmarcas) {
-		 nmarcas= "Honda";
-		 this.marcas = nmarcas;
+	public void set_marcas (String marcas) {//setter//
+		 this.marcas = marcas;
 	}
-	public String get_marcas() {
+	
+	public String get_marcas() {//getter/
 		return "es " + marcas;	
 	}
 	
-	public void set_modelo(String nmodelo) {
-		nmodelo = "impala";
-		this.modelo = nmodelo;
+	public void set_modelo(String modelo) {//setter//
+		this.modelo = modelo;
 	}
 	
-	public String get_modelo() {
+	public String get_modelo() {//getter//
 		return "es " + modelo;
 	}
 	
