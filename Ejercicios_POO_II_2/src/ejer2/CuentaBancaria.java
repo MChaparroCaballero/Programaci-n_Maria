@@ -1,33 +1,34 @@
 package ejer2;
 
-public class CuentaBancaria {
+public class CuentaBancaria {//atributos//
 	private String titular;
 	private double saldo;
 
-	CuentaBancaria() {
+	CuentaBancaria() {//constructor//
 		titular = "Maria";
 		saldo = 1000;
 	}
-	
-	public void set_titular(String ntitular) {
-		
-		this.titular =ntitular;
+
+	public void set_titular(String titular) {//setter//
+
+		this.titular = titular;
 	}
-	
-	public String get_titular() {
-		return "es " + titular;	
+
+	public String get_titular() {//getter//
+		return "es " + titular;
 	}
-	public void set_saldo(double nsaldo) {
-		
-	
-		if (nsaldo >= 0) {
-			this.saldo = nsaldo;
-		}else {
+
+	public void set_saldo(double saldo) {//setter//
+
+		if (saldo >= 0) {//restringimos el funcionamiento en caso de saldo en numeros negaivos//
+			this.saldo = saldo;
+		} else {
 			System.out.println("No esta permitido los saldos negativos");
 			this.saldo = (Double) null;
 		}
 	}
-	public String get_saldo() {
-		return "de " + saldo;	
+
+	public String get_saldo() {//getter//
+		return "de " + saldo;
 	}
 }

@@ -12,7 +12,7 @@ public class Uso_deCuentaBancaria {
 
 		
 		CuentaBancaria millonaria = new CuentaBancaria();
-		millonaria.set_titular("Ana");
+		millonaria.set_titular("Isabela");
 		millonaria.set_saldo(260.6);
 		
 		System.out.println("El titular " + millonaria.get_titular() + " con un saldo " + millonaria.get_saldo() + " euros");
