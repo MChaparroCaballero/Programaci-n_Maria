@@ -11,8 +11,8 @@ public class Uso_deEstudiante {
 		 * calificación esté en el rango de 0 a 100.
 		 */
 
-		Estudiante once = new Estudiante();
-		once.set_Nombre("Jimena");
+		Estudiante once = new Estudiante();//instanciamos//
+		once.set_Nombre("Jimena");//los nuevos valores del setter//
 		once.set_Edad(18);
 		once.set_calificacion(5.5);
 
