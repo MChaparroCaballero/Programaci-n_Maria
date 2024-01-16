@@ -22,7 +22,13 @@ public class Estudiante {
 	}
 
 	public void set_Edad(int nEdad) {
-		this.Edad = nEdad;
+		if(nEdad>=0) {
+			this.Edad = nEdad;	
+		}else {
+			System.out.println("Error no existen edades negativas");
+			this.Edad=(Integer) null;
+		}
+		
 
 	}
 
@@ -31,7 +37,13 @@ public class Estudiante {
 	}
 
 	public void set_calificacion(double ncalificacion) {
-		this.calificacion = ncalificacion;
+		if(ncalificacion>=0 && ncalificacion <=100) {
+			this.calificacion = ncalificacion;	
+		}else {
+			System.out.println("Error esta fuera del rango de calificaciones");
+			this.calificacion= (Double) null;
+		}
+		
 
 	}
 
