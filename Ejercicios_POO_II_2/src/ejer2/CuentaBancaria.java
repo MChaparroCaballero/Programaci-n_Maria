@@ -10,7 +10,7 @@ public class CuentaBancaria {
 	}
 	
 	public void set_titular(String ntitular) {
-		ntitular = "Ana";
+		
 		this.titular =ntitular;
 	}
 	
@@ -18,8 +18,14 @@ public class CuentaBancaria {
 		return "es " + titular;	
 	}
 	public void set_saldo(double nsaldo) {
-		nsaldo = 2600;
-		this.saldo =nsaldo;
+		
+	
+		if (nsaldo >= 0) {
+			this.saldo = nsaldo;
+		}else {
+			System.out.println("No esta permitido los saldos negativos");
+			this.saldo = (Double) null;
+		}
 	}
 	public String get_saldo() {
 		return "de " + saldo;	
