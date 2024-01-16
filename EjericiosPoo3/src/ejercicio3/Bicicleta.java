@@ -6,7 +6,7 @@ public class Bicicleta {
 	String tipo;
 	int tamaño;
 
-	Bicicleta() {
+	public Bicicleta() {
 		//hacemos el constructor//
 		numRuedas = 2;
 		tipo = "Montaña";
