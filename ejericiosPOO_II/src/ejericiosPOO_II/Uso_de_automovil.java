@@ -10,8 +10,12 @@ public class Uso_de_automovil {
 		 * de que el modelo no sea nulo ni esté vacío en el setter.
 		 */
 
+		
 		Automovil nuevo = new Automovil();
-		System.out.print("La marca del automovil es " + nuevo.get_marcas());
+		nuevo.set_marcas("honda");
+		nuevo.set_modelo("impala");
+		System.out.println("La marca del automovil " + nuevo.get_marcas());
+		System.out.println("El modelo del automovil " + nuevo.get_modelo());
 		
 	}
 

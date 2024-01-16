@@ -11,21 +11,24 @@ public class Automovil {
 		modelo= "mustang";
 	}
 	
+	public void set_marcas (String nmarcas) {
+		 nmarcas= "Honda";
+		 this.marcas = nmarcas;
+	}
 	public String get_marcas() {
-		return "la marca es " + marcas;	
+		return "es " + marcas;	
 	}
 	
-	public void set_marcas (String marcas) {
-		 marcas = "Honda";
+	public void set_modelo(String nmodelo) {
+		nmodelo = "impala";
+		this.modelo = nmodelo;
 	}
 	
 	public String get_modelo() {
-		return "el modelo es " + modelo;
+		return "es " + modelo;
 	}
 	
-	public void set_modelo(String modelo) {
-		modelo = "impala";
-	}
+	
 	
 	
 
