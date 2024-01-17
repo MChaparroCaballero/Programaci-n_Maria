@@ -26,7 +26,7 @@ public class Estudiante {//atributos//
 			this.Edad = Edad;
 		} else {
 			System.out.println("Error no existen edades negativas");
-			this.Edad = (Integer) null;
+			
 		}
 
 	}
@@ -39,8 +39,8 @@ public class Estudiante {//atributos//
 		if (calificacion >= 0 && calificacion <= 100) {//restringimos su funcionamiento en caso de estar fuera del intervalo deseado//
 			this.calificacion = calificacion;
 		} else {
-			System.out.println("Error esta fuera del rango de calificaciones");
-			this.calificacion = (Double) null;
+			System.out.println("Error esta fuera del rango de calificaciones, debe ser entre 0 y 100");
+			
 		}
 
 	}
