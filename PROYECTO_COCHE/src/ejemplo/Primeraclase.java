@@ -3,19 +3,37 @@ package ejemplo;
 public class Primeraclase {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// CONTENIDO DEL MAIN:
-		// Esto es instanciar una clase
-		// Esto es crear un ejemplar de una clase
-		Coche Renault = new Coche();
-		Coche subaru = new Coche();
 		
-		// Ahora quiero ver las características de este coche
-		System.out.println("mi coche tiene " + Renault.getMotor());
-		System.out.println("Mi coche tiene " + Renault.getColor() );
+		Coche Subaru = new Coche();
+		Subaru.establece_color("Amarillo");
+		/*3. Aquí, mete en establece_color un valor para darle color al coche
+		 * Este parámetro se almacena en color_coche.
+		 * Los valores se pueden pasar por parámetro y por referencia.
+		 * Lo veremos más adelante.*/
+		
+		//Subaru.color="Morado Podemita";
+		
+		/*5. Con este paso se crea un problema de encapsulamiento.
+		 * Si recuerdas, anteriormente dije que poniendo las cosas
+		 * en private, podías evitar cambios. Color no tiene el modificador
+		 * de acceso private y, por tanto, puede editarse. 
+		 * Cambia el color del coche al ejemplo.
+		 * Nunca debes poder manipular la instancia del objeto.
+		 * Cambia las características particulares a private
+		 * Ve a Coche.java*/
 		
 		
-		System.out.println("Mi coche tiene " + subaru.getColor());
-		System.out.println("Mi coche tiene " + subaru.getRuedas());
+		/*7. Como ves, se genera un error con Subaru.color
+		 * Ya no es pública.
+		 * Vete a Coche.java*/
+		
+		/*9. Comenta o borra la línea de Subaru.color="Morado Podemita";
+		 * Vete a Coche.Java*/
+		
+		System.out.println(Subaru.dime_datos_generales());
+		System.out.println(Subaru.dime_color());
+		/*14. Vamos a ver tu coche y sus asientos. */
+		Subaru.configura_asientos("si");
+		System.out.println(Subaru.dime_asientos());
 	}
 }
