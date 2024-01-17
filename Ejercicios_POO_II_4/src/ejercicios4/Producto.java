@@ -33,7 +33,7 @@ public class Producto {// propiedades//
 		if (nstock >= 0) {
 			stock = nstock;
 		} else {
-			nstock = (Integer) null;
+			System.out.println("el stock no puede ser negativo");
 		}
 	}
 
