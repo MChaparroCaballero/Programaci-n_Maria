@@ -24,7 +24,7 @@ public class CuentaBancaria {//atributos//
 			this.saldo = saldo;
 		} else {
 			System.out.println("No esta permitido los saldos negativos");
-			this.saldo = (Double) null;
+			
 		}
 	}
 
