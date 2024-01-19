@@ -72,6 +72,7 @@ public class Uso_RelojAlarma {
 					alarma.set_horaAlarma(tiempo);
 				}
 				
+				lector.close();
 				alarma.verificacionAlarma();
 				
 				}
