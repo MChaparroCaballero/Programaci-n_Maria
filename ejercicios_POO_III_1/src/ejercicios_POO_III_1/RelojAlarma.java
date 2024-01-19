@@ -1,61 +1,32 @@
 package ejercicios_POO_III_1;
 
+import java.time.LocalDateTime;
+
 public class RelojAlarma {
-	private int horaAlarma;
 
-	private int minutosAlarma;
+	private LocalDateTime horaAlarma;
 
-	private int horaActual;
-
-	private int minutosActual;
+	private LocalDateTime horaActual;
 
 	private boolean activada;
 
-	RelojAlarma() {
+	public RelojAlarma() {
 
-		horaAlarma = 06;
+		horaAlarma = LocalDateTime.now();
 
-		minutosAlarma = 25;
-
-		horaActual = 10;
-
-		minutosActual = 24;
+		horaActual = LocalDateTime.now();
 
 	}
 
-	public void set_minutosAlarma(int minutosAlarma) {// setter//
-
-		this.minutosAlarma = minutosAlarma;
-
-	}
-
-	public int get_minutosAlarma() {// getter//
-
-		return minutosAlarma;
-
-	}
-
-	public void set_horaActual(int horaActual) {// setter//
+	public void set_horaActual(LocalDateTime horaActual) {// setter//
 
 		this.horaActual = horaActual;
 
 	}
 
-	public int get_horaActual() {// getter//
+	public LocalDateTime get_horaActual() {// getter//
 
 		return horaActual;
-
-	}
-
-	public void set_minutosActual(int minutosActual) {// setter//
-
-		this.minutosActual = minutosActual;
-
-	}
-
-	public int get_minutosActual() {// getter//
-
-		return minutosActual;
 
 	}
 
@@ -65,19 +36,18 @@ public class RelojAlarma {
 
 	}
 
-	public String get_activada() {
+	public String get_activada() {// getter//
 
 		return " la alarma esta activada" + activada;
 
 	}
 
-	public void set_horaAlarma(int horaAlarma) {// setter//
-
-		this.horaAlarma = horaAlarma;
+	public void set_horaAlarma(LocalDateTime nhorasDateTime) {// setter//
+		this.horaAlarma = nhorasDateTime;
 
 	}
 
-	public int get_horaAlarma() {// getter//
+	public LocalDateTime get_horaAlarma() {// getter//
 
 		return horaAlarma;
 
