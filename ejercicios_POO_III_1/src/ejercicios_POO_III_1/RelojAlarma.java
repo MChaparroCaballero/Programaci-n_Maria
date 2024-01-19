@@ -1,7 +1,5 @@
 package ejercicios_POO_III_1;
 
-import java.time.LocalDateTime;
-
 public class RelojAlarma {
 
 	private String horaAlarma;
