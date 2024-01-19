@@ -4,27 +4,27 @@ import java.time.LocalDateTime;
 
 public class RelojAlarma {
 
-	private LocalDateTime horaAlarma;
+	private String horaAlarma;
 
-	private LocalDateTime horaActual;
+	private String horaActual;
 
 	private boolean activada;
 
 	public RelojAlarma() {
 
-		horaAlarma = LocalDateTime.now();
-
-		horaActual = LocalDateTime.now();
+		horaAlarma = "21:30";
+		horaActual = "21:00";
+		activada = false;
 
 	}
 
-	public void set_horaActual(LocalDateTime horaActual) {// setter//
+	public void set_horaActual(String horaActual) {// setter//
 
 		this.horaActual = horaActual;
 
 	}
 
-	public LocalDateTime get_horaActual() {// getter//
+	public String get_horaActual() {// getter//
 
 		return horaActual;
 
@@ -42,15 +42,22 @@ public class RelojAlarma {
 
 	}
 
-	public void set_horaAlarma(LocalDateTime nhorasDateTime) {// setter//
+	public void set_horaAlarma(String nhorasDateTime) {// setter//
 		this.horaAlarma = nhorasDateTime;
 
 	}
 
-	public LocalDateTime get_horaAlarma() {// getter//
+	public String get_horaAlarma() {// getter//
 
 		return horaAlarma;
 
 	}
 
+	public void verificacionAlarma() {
+		if (activada && horaActual.equals(horaAlarma)) {
+			System.out.println("La alarma esta sonando");
+		} else {
+			System.out.println("");
+		}
+	}
 }
