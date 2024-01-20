@@ -5,7 +5,7 @@ public class Habitacion {
 	private String tipo;
 	private boolean ocupada;
 	
-	public Habitacion(){
+	public Habitacion(int i, String string){
 		this.numhabitacion = numhabitacion;
 		this.tipo = tipo;
 		ocupada = false;
@@ -20,7 +20,7 @@ public class Habitacion {
 	}
 	
 
-	    public int get_numerohabitacion() {
+	    public int get_numerohabitacion() {//getter//
 	        return numhabitacion;
 	    }
 
@@ -32,15 +32,15 @@ public class Habitacion {
 			}
 		}
 	   
-	    public String get_tipo() {
+	    public String get_tipo() {//getter//
 	    	return tipo;
 	    }
 	    
-	    public void setOcupada(boolean ocupada) {
+	    public void setOcupada(boolean ocupada) {//setter//
 	        this.ocupada = ocupada;
 	    }
 	    
-	    public boolean esOcupada() {
+	    public boolean esOcupada() {//getter//
 	        return ocupada;
 	    }
 
