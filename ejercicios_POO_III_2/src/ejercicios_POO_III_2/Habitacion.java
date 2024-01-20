@@ -5,37 +5,46 @@ public class Habitacion {
 	private String tipo;
 	private boolean ocupada;
 	
-	Habitacion(){
-		numhabitacion = 1;
-		tipo = "simple";
+	public Habitacion(){
+		this.numhabitacion = numhabitacion;
+		this.tipo = tipo;
 		ocupada = false;
 	}
-		public Habitacion(int numerohabitacion, String tipo) {
-	        this.numhabitacion = numerohabitacion;
-	        this.tipo = tipo;
-	        this.ocupada = false;
-	    }
+		
+	public void set_numhabitacion(int numhabitacion) { //setter
+		if (numhabitacion < 1) {
+			System.out.println("El número de habitación tiene que ser mayor a cero");
+		}else {
+			this.numhabitacion = numhabitacion;
+		}
+	}
+	
 
-	    public int getNumeroHabitacion() {
+	    public int get_numerohabitacion() {
 	        return numhabitacion;
 	    }
 
-	    public void setNumeroHabitacion(int numhabitacion) {
-	        this.numhabitacion = numhabitacion;
+		public void set_tipo(String tipo) { //setter
+			if (tipo.equalsIgnoreCase("simple") || tipo.equalsIgnoreCase("doble") || tipo.equalsIgnoreCase("suite")) {
+				this.tipo = tipo;
+			}else {
+				System.out.println("Solo se  puede elegir entre ser tipo simple, doble o suite");
+			}
+		}
+	   
+	    public String get_tipo() {
+	    	return tipo;
 	    }
-	    public String getTipo() {
-	        return tipo;
+	    
+	    public void setOcupada(boolean ocupada) {
+	        this.ocupada = ocupada;
 	    }
-	    public void setTipo(String tipo) {
-	        this.tipo = tipo;
-	    }
+	    
 	    public boolean esOcupada() {
 	        return ocupada;
 	    }
 
-	    public void setOcupada(boolean ocupada) {
-	        this.ocupada = ocupada;
-	    }
+	    
 	}
 	
 
