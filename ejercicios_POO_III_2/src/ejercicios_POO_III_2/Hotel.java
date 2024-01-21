@@ -37,7 +37,7 @@ public class Hotel {
 				System.out.println("La habitación no está reservada");
 			}
 		}
-		//método para verificar la disponibilidad
+		//método para verificar la disponibilidad//
 		public boolean verificarDisponibilidad(int numero) {
 			for (Habitacion a : habitaciones) {
 				if (a.get_numerohabitacion() == numero) {

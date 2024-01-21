@@ -16,7 +16,7 @@ public class Uso_deHotel {
 		lector = new BufferedReader(info);
 		Scanner scanner;
 		scanner = new Scanner(System.in);
-		Hotel hotel = new Hotel(); // instanciar la clase
+		Hotel hotel = new Hotel(); // instanciar la clase//
 		int i = 0;
 
 		
@@ -45,17 +45,17 @@ public class Uso_deHotel {
 				System.out.println("Que tipo de habitación quiere, simple , doble, suite");
 				String type = lector.readLine();
 
-				// carga los valores de las variables
+				// carga los valores de las variables//
 				Habitacion habitacion1 = new Habitacion(num, type);
 
-				// añadir habitaciones al hotel
+				// añadir habitaciones al hotel//
 				hotel.habitaciones.add(habitacion1);
 
 				hotel.reservarHabitacion(num);
 
 				break;
 
-			case 2:// cancelar reservas
+			case 2:// cancelar reservas//
 				System.out.println("Que numero es la reserva que quiere cancelar");
 				num = scanner.nextInt();
 				System.out.println("Que tipo de habitacion es la reserva que quiere cancelar");
