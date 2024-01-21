@@ -82,7 +82,7 @@ public class Uso_RelojAlarma {
 			}
 
 		}
-		// cerramos bucle de proceso de alarmas//
+		// cerramos bucle de proceso de alarmas perfecto//
 		iniciarAlarma = false;
 
 	}
