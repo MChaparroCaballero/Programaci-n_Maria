@@ -19,6 +19,7 @@ public class Uso_RelojAlarma {
 		BufferedReader buffer;
 		info = new InputStreamReader(System.in);
 		buffer = new BufferedReader(info);
+		int i = 0;// variable random para el segundo bucle//
 
 		System.out.println("Desea crear una alarma? 1)si 2) no");
 		int eleccion = lector.nextInt();// para que el usuario introduzca su opcion//
@@ -57,24 +58,32 @@ public class Uso_RelojAlarma {
 			// le damos opcion de modificar los datos de hora actual y alarma en caso de
 			// error o de actualización o cerrar proceso//
 
-			eleccion = lector.nextInt();
-			if (eleccion == 1) {
-				iniciarAlarma = false;
-				buffer.close();
-			} else {
-				System.out.println("Que hora actual deberia ser?");
-				String tiempoA = buffer.readLine();// tiempo metido en string por usuario//
-				alarma.set_horaActual(tiempoA);
-				System.out.println("A que hora deberia ser la alarma?");
-				String tiemponuevo = buffer.readLine();// tiempo metido en string por usuario//
-				alarma.set_horaAlarma(tiemponuevo);
-				buffer.close();
-				lector.close();
+			int eleccion2 = lector.nextInt();
+			while (i < 3) {
+				switch (eleccion2) {
+				case 1:// todo esta correcto y cerramos proceso//
+					iniciarAlarma = false;
+					buffer.close();
+					System.out.println("Gracias por utilizar nuestro sistema");
+					i = 3;
+					break;
+				case 2:// noe sta correcto todos los datos asique haremos esto hasta que lo esten//
+					System.out.println("Que hora actual deberia ser?");
+					String tiempoA = buffer.readLine();// tiempo metido en string por usuario//
+					alarma.set_horaActual(tiempoA);
+					System.out.println("A que hora deberia ser la alarma?");
+					String tiemponuevo = buffer.readLine();// tiempo metido en string por usuario//
+					alarma.set_horaAlarma(tiemponuevo);
+					System.out.println("SU ALARMA ESTA PROGRAMADA A LAS " + alarma.get_horaAlarma() + " son las "
+							+ alarma.get_horaActual() + " esta todo correcto?1)Si 2)No");
+					eleccion2 = lector.nextInt();
+					break;
+				}
 			}
 
-			iniciarAlarma = false;
-
 		}
-	}
+		// cerramos bucle de proceso de alarmas//
+		iniciarAlarma = false;
 
+	}
 }
