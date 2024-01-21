@@ -4,18 +4,14 @@ import java.util.ArrayList;
 
 public class Hotel {
 	
-	
-	/*Habitacion habitaciones = new Habitacion[numHabitaciones];
-    for (int i = 0; i < numHabitaciones; i++) {
-        habitaciones[i] = new Habitacion(i + 1, "simple");*/
 		ArrayList<Habitacion> habitaciones;// crea una lista de habitaciones
 		// constructor
 		public Hotel() {
 			this.habitaciones = new ArrayList<>();
 		}
 		// método para reservar las habitaciones
-		public void reservar_Habitacion(int numero) {
-			if (verificar_Disponibilidad(numero)) {
+		public void reservarHabitacion(int numero) {
+			if (verificarDisponibilidad(numero)) {
 				for (Habitacion nueva : habitaciones) {
 					if (nueva.get_numerohabitacion() == numero) {
 						nueva.setOcupada(true);
@@ -28,11 +24,11 @@ public class Hotel {
 			}
 		}
 		//método para cancelar la reserva
-		public void cancelar_Reserva(int numero) {
-			if (!verificar_Disponibilidad(numero)) {
-				for (Habitacion h : habitaciones) {
-					if (h.get_numerohabitacion() == numero) {
-						h.setOcupada(false);
+		public void cancelarReserva(int numero) {
+			if (!verificarDisponibilidad(numero)) {
+				for (Habitacion a : habitaciones) {
+					if (a.get_numerohabitacion() == numero) {
+						a.setOcupada(false);
 						System.out.println("Reserva cancelada");
 						break;
 					}
@@ -42,10 +38,10 @@ public class Hotel {
 			}
 		}
 		//método para verificar la disponibilidad
-		public boolean verificar_Disponibilidad(int numero) {
-			for (Habitacion h : habitaciones) {
-				if (h.get_numerohabitacion() == numero) {
-					return !h.esOcupada();
+		public boolean verificarDisponibilidad(int numero) {
+			for (Habitacion a : habitaciones) {
+				if (a.get_numerohabitacion() == numero) {
+					return !a.esOcupada();
 				}
 			}
 			System.out.println("No existe la habitación");

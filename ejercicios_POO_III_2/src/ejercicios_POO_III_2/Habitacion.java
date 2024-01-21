@@ -5,7 +5,7 @@ public class Habitacion {
 	private String tipo;
 	private boolean ocupada;
 	
-	public Habitacion(int i, String string){
+	public Habitacion(int numhabitacion, String tipo){
 		this.numhabitacion = numhabitacion;
 		this.tipo = tipo;
 		ocupada = false;

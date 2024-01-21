@@ -16,7 +16,7 @@ public class Uso_deHotel {
 		hotel.habitaciones.add(habitacion2);
 		hotel.habitaciones.add(habitacion3);
 		// reservar una habitación
-		hotel.reservar_Habitacion(6);
+		hotel.reservarHabitacion(6);
 		
 	}
 
