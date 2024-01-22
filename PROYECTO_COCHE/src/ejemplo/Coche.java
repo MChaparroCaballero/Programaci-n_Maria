@@ -26,8 +26,16 @@ public class Coche {
 		return climatizador;
 	}
 
-	public void configura_climatizador(boolean climatizador) {
-		this.climatizador = climatizador;
+	public void configura_climatizador(String climatizador) {
+		if(climatizador.equalsIgnoreCase("si")) {
+			//2. compara las cadenas con un equals//
+			this.climatizador = true;
+			
+		}else {
+			this.climatizador = false;
+		}
+		
+		
 	}
 
 	public String dime_motor() {// GETTER
