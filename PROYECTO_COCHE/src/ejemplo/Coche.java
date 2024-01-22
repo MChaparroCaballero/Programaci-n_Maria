@@ -22,6 +22,14 @@ public class Coche {
 
 	}
 
+	public boolean dime_climatizador() {
+		return climatizador;
+	}
+
+	public void configura_climatizador(boolean climatizador) {
+		this.climatizador = climatizador;
+	}
+
 	public String dime_motor() {// GETTER
 
 		return "El motor del coche tiene " + motor + " caballos de potencia";
