@@ -124,5 +124,21 @@ public class Coche {
 		return "el peso del coche es " + peso_total;
 	}
 
-	
+	public int precio_coche() {// getter//
+		int precio_final = 1000;
+
+		if (asientos_cuero == true) {
+			precio_final += 2000;
+			// 7.recuerda que lo de arriba es igual a esto://
+			// precio-final = precio_final + 2000;//
+		}
+		if (climatizador == true) {
+			precio_final += 1500;
+		}
+		return precio_final;
+		/*
+		 * 8. Una vez acabado este codigo, vamos al main uso_coche que en el nuestro es Primeraclase
+		 */
+	}
+
 }

@@ -1,5 +1,7 @@
 package ejemplo;
 
+import javax.swing.JOptionPane;
+
 public class Primeraclase {
 
 	public static void main(String[] args) {
@@ -7,13 +9,23 @@ public class Primeraclase {
 
 
 			Coche Subaru = new Coche();
-			Subaru.establece_color("Amarillo");
+			Subaru.establece_color(JOptionPane.showInputDialog("Introduce el color"));
 			/*3. Aquí, mete en establece_color un valor para darle color al coche
 			 * Este parámetro se almacena en color_coche.
 			 * Los valores se pueden pasar por parámetro y por referencia.
 			 * Lo veremos más adelante.*/
 			
 			//Subaru.color="Morado Podemita";
+			
+			System.out.println(Subaru.dime_color());
+			Subaru.configura_asientos(JOptionPane.showInputDialog("Tienes asientos de cuero"));
+			System.out.println(Subaru.dime_asientos());
+			
+			Subaru.configura_climatizador(JOptionPane.showInputDialog("Tienes aclimatizador o sos un motochorro"));
+			System.out.println(Subaru.dime_climatizador());
+			System.out.println(Subaru.dime_peso_coche());
+			
+			System.out.println("El precio  final del coche es " + Subaru.precio_coche());
 			
 			/*5. Con este paso se crea un problema de encapsulamiento.
 			 * Si recuerdas, anteriormente dije que poniendo las cosas
