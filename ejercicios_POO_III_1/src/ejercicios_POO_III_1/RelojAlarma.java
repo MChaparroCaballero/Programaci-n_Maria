@@ -13,7 +13,7 @@ public class RelojAlarma {
 		horaAlarma = "21:30";
 		horaActual = "21:00";
 		activada = false;
-
+//..//
 	}
 
 	public void set_horaActual(String horaActual) {// setter//
