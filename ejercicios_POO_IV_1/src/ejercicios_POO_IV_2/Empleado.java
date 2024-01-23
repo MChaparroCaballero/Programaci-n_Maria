@@ -4,13 +4,13 @@ public class Empleado {
 	private String nombre;
 	private int horasTrabajadas;
 	private double tarifaHora;
-	
+	private double salario;
 
-	Empleado(String nombre, int horasTrabajadas, double tarifaHora) {
+	Empleado(String nombre, int horasTrabajadas, double tarifaHora, double salario) {
 		this.nombre = nombre;
 		this.horasTrabajadas = horasTrabajadas;
 		this.tarifaHora = tarifaHora;
-		
+		this.salario = salario;
 	}
 
 
@@ -41,6 +41,15 @@ public class Empleado {
 
 	public double get_tarifaHora() {//getter//
 		return tarifaHora;
+
+	}
+	
+	public void set_salario(double salario) {//setter//
+		this.salario = salario;
+	}
+	
+	public double get_salario() {//getter//
+		return salario;
 
 	}
 }

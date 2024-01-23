@@ -10,15 +10,12 @@ public class Uso_Estudiante {
 		// TODO Auto-generated method stub
 		// Crear un array para almacenar los objetos Estudiante
 		
-		Empleado[] nomina = new Empleado[2];
-		double salario = 0;
+		Empleado[] nomina = new Empleado[4];
+
 		// Llenar el array con objetos nomina creados con datos ingresados por el
 		// usuario
 		for (int i = 0; i < nomina.length; i++) {
 			nomina[i] = crearEmpleado();
-			
-			salario = nomina[i].get_horasTrabajadas() * nomina[i].get_tarifaHora();
-			
 		}
 		
 		// Mostrar información utilizando getters y un bucle
@@ -39,7 +36,8 @@ public class Uso_Estudiante {
 		String nombre = JOptionPane.showInputDialog("Introduzca el nombre del trabajador:");
 		int horasTrabajadas = Integer.parseInt(JOptionPane.showInputDialog("Dime las horas trabajadas del trabajador:"));
 		double tarifaHora = Double.parseDouble(JOptionPane.showInputDialog("Introduzca la tarifa por hora trabajada:"));
-		return new Empleado (nombre, horasTrabajadas, tarifaHora);
+		double salario = horasTrabajadas * tarifaHora;
+		return new Empleado (nombre, horasTrabajadas, tarifaHora, salario);
 	
 		
 	}
@@ -48,7 +46,7 @@ public class Uso_Estudiante {
 	// Método para mostrar la información de un trabajador utilizando getters
 	private static void mostrarInformacionEmpleado(Empleado trabajador) {
 		JOptionPane.showMessageDialog(null, "Nombre: " + trabajador.get_nombre() + "\nhoras Trabajadas: " + trabajador.get_horasTrabajadas()
-				+ "\nTarifa hora: " + trabajador.get_tarifaHora());
+				+ "\nTarifa hora: " + trabajador.get_tarifaHora() + "\nsalario: " + trabajador.get_salario());
 
 	}
 	
