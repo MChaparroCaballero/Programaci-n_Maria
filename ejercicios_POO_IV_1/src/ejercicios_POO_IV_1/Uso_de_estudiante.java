@@ -18,13 +18,14 @@ public class Uso_de_estudiante {
 		for (int i = 0; i < estudiantes.length; i++) {
 			estudiantes[i] = crearEstudiante();
 		}
+		
+		// Mostrar información utilizando getters y un bucle
 			for (Estudiante estudiante : estudiantes) {
 				mostrarInformacionEstudiante(estudiante);
 			}
 		
 	}
 
-	// Mostrar información utilizando getters y un bucle
 
 	// Método para crear un objeto Estudiante con datos introducidos por el usuario
 
