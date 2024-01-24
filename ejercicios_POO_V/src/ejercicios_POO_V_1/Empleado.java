@@ -33,7 +33,7 @@ public class Empleado {
 		this.sueldo = sueldo;
 	}
 
-	public Date dameFecha_contrato() {
+	public Date dameFechaContrato() {
 		return fecha_contrato;
 	}
 

@@ -9,18 +9,20 @@ public class Uso_deEmpleado {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Empleado maria = new Empleado(JOptionPane.showInputDialog("Ingrese el nombre"),
+		Empleado empleado1 = new Empleado(JOptionPane.showInputDialog("Ingrese el nombre"),
 				Double.parseDouble(JOptionPane.showInputDialog("Ingrese el sueldo")),
 				Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de alta")),
 				Integer.parseInt(JOptionPane.showInputDialog("Ingrese el més de incorporacion")),
 				Integer.parseInt(JOptionPane.showInputDialog("Ingrese el día de incorporacion")));
-		mostrarinfo(maria);
+		mostrarinfo(empleado1);
 	}
 
 	public static void mostrarinfo(Empleado t) {
 
 		JOptionPane.showMessageDialog(null, "Nombre: " + t.dameNombre() + " \nSueldo: " + t.dameSueldo()
-				+ " \nAlta de contrato: " + t.dameFecha_contrato());
+				+ " \nAlta de contrato: " + t.dameFechaContrato());
+		System.out.println("Nombre: " + t.dameNombre() + " \nSueldo: " + t.dameSueldo()
+		+ " \nAlta de contrato: " + t.dameFechaContrato());
 	}
 }
 	
