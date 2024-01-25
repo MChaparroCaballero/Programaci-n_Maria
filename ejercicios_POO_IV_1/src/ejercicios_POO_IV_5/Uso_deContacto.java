@@ -13,8 +13,7 @@ public class Uso_deContacto {
 		int opcion;
 
 		while (menu < 4) {
-			opcion = Integer.parseInt(JOptionPane.showInputDialog(
-					"Desea:  \n1)añadir un contacto \n2)mostrar los contactos \n3)buscar un contacto \n4)salir del menu"));
+			opcion = Integer.parseInt(JOptionPane.showInputDialog("Desea:  \n1)añadir un contacto \n2)mostrar los contactos \n3)buscar un contacto \n4)salir del menu"));
 			switch (opcion) {
 			case 1:
 				// intenta hacer la accion de añadir un contacto nuevo//
