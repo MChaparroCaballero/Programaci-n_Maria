@@ -37,8 +37,10 @@ public class Uso_deProducto {
 	
 	
 	private static void resumenInventario(Producto inventarios) {
-		JOptionPane.showMessageDialog(null, "Nombre: " + inventarios.getNombre() + "\nCantidad: " + inventarios.getCantidad()
-				+ "\nPrecio/unidad: " + inventarios.getPrecio());
+		System.out.println("Resumen de inventario: ");	
+		System.out.println("Nombre: " + inventarios.getNombre() + "\nCantidad: " + inventarios.getCantidad()
+				+ "\nPrecio/unidad: " + inventarios.getPrecio() + "\ntotal: " + (inventarios.getCantidad() * inventarios.getPrecio()) + " euros");
+		System.out.println("------------------------------------------------------------------------");
 	}
 	
 }
