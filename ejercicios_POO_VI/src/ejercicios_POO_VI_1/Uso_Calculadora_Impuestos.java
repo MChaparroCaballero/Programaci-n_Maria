@@ -26,7 +26,7 @@ public class Uso_Calculadora_Impuestos {
 
 				// imprimos los datos del objeto antes de aplicar el impuesto sobre el precio//
 				JOptionPane.showMessageDialog(null, "\nNombre: " + peras.getNombre() + "\nprecio antes de impuestos : "
-						+ peras.getPrecio() + "\nporcentaje a aplicar: " + peras.getporcentaje());
+						+ peras.getPrecio() + "\nporcentaje a aplicar: " + peras.getporcentaje() +"%");
 
 				// aplicamos el impuesto sobre el precio//
 				peras.setPrecio(peras.getPrecio() + ((peras.getPrecio() * peras.getporcentaje()) / 100));
@@ -34,7 +34,7 @@ public class Uso_Calculadora_Impuestos {
 				// imprimimos los datos del objetos despues de aplicar el impuesto sobre el
 				// precio//
 				JOptionPane.showMessageDialog(null, "\nNombre: " + peras.getNombre() + "\n nuevo precio con impuestos: "
-						+ peras.getPrecio() + "\nporcentaje aplicado: " + peras.getporcentaje());
+						+ peras.getPrecio() + "\nporcentaje aplicado: " + peras.getporcentaje() + "%");
 
 				break;
 			case 2:
