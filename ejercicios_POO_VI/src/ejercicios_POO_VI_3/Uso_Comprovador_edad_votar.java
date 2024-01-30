@@ -26,8 +26,8 @@ public class Uso_Comprovador_edad_votar {
 			JOptionPane.showMessageDialog(null, "\nNombre: " + voto1.getNombre() + "\nEdad :" + voto1.getEdad()
 					+ "\nPartido votado: " + voto1.getvoto());
 		} else {
-			// en caso de no cumplir los requisitos de edad minima te muestra este mensaje y
-			// te manda a tu casa*/
+			/*en caso de no cumplir los requisitos de edad minima te muestra este mensaje y
+			 te manda a tu casa*/
 			JOptionPane.showMessageDialog(null,
 					"Error, o ha introducido su edad mal o no cumple lo requesitos para votar");
 		}
