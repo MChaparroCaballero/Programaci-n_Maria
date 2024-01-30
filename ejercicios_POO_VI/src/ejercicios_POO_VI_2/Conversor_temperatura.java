@@ -12,4 +12,27 @@ public class Conversor_temperatura {
 		factor_conversion = 1.8;
 		ajuste = 32;
 	}
+
+
+	public double getTemperatura() {
+		return temperatura;
+	}
+
+
+	public void setTemperatura(double temperatura) {
+		this.temperatura = temperatura;
+	}
+
+
+	public double getAjuste() {
+		return ajuste;
+	}
+
+
+	public double getFactor_conversion() {
+		return factor_conversion;
+	}
+
+	
+	
 }
