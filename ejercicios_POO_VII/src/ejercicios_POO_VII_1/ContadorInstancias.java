@@ -15,7 +15,7 @@ public class ContadorInstancias {
 
 	} 
 
- //ninonuno//
+ //nihug//
 
 	public String getNombre() { 
 
