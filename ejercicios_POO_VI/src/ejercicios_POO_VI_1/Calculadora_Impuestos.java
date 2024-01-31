@@ -6,7 +6,7 @@ public class Calculadora_Impuestos {
 	private double precio;
 	private final int porcentaje;
 	
-	
+	//55//
 	public Calculadora_Impuestos(String nom, double precio,int porcentaje) {
 		nombre = nom;
 		this.precio = precio;
