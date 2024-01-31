@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 public class Uso_ContadorInstancias {
 
 	public static void main(String[] args) {
+		//creamos array//
 
 		ContadorInstancias[] nombres = new ContadorInstancias[3];
 
