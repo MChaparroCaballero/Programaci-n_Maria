@@ -65,6 +65,7 @@ public class Uso_Calculadora {
 			// el default para que no puedan meter una opcion que no existe//
 			default:
 				JOptionPane.showMessageDialog(null, "Error, opción invalida");
+				break;
 
 			}
 		}
