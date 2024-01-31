@@ -57,6 +57,10 @@ public class Uso_Calculadora_descuentos {
 				JOptionPane.showMessageDialog(null, "Gracias por usar nuestra app");
 				i = 2;
 				break;
+				
+			default:
+				JOptionPane.showMessageDialog(null, "Error, opción invalida");
+
 				//.//		
 				}
 		}
