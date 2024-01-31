@@ -41,6 +41,11 @@ public class Uso_deDeterminadorAñoBisiesto {
 				JOptionPane.showMessageDialog(null, "Gracias por usar nuestra app");
 				i = 2;
 				break;
+				
+			default:
+				JOptionPane.showMessageDialog(null, "Error, opción invalida");
+				break;
+
 			}
 
 		}
