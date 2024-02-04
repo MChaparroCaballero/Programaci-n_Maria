@@ -46,7 +46,7 @@ public class Uso_Calculadora_Impuestos {
 				
 			default:
 				JOptionPane.showMessageDialog(null, "Error, opción invalida");
-
+ 
 			}
 		}
 
