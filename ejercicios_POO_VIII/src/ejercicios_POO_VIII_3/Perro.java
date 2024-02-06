@@ -9,6 +9,7 @@ public class Perro extends Animal {
 
 	}
 
+
 	public void emitirSonido() {//metodo sobreescrito//
 		JOptionPane.showMessageDialog(null, "El perro ladra");
 
