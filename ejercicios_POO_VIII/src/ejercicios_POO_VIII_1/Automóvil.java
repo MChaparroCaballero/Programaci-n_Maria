@@ -1,7 +1,7 @@
 package ejercicios_POO_VIII_1;
 
 public class Automóvil extends Vehículo {
-	String tipoDeCombustible;//atributos//
+	private String tipoDeCombustible;//atributos//
 
 	//constructor//
 	public Automóvil(String marca, String modelo, int año, String tipoDeCombustible) {
