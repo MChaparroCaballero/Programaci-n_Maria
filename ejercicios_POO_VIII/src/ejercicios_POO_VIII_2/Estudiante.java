@@ -1,7 +1,7 @@
 package ejercicios_POO_VIII_2;
 
 public class Estudiante extends Persona {
-	String carrera;
+	private String carrera;
 
 	public Estudiante(String nombre, int edad, String carrera) {//constructor//
 		super(nombre, edad); //atributos de la clase madre//
