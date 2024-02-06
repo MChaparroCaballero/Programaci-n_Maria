@@ -9,6 +9,7 @@ public class Test_clases {
 				JOptionPane.showInputDialog("Ingrese el modelo del vehiculo"), 
 				Integer.parseInt(JOptionPane.showInputDialog("Ingrese el año de compra")), JOptionPane.showInputDialog("Ingrese lel tipo de combustible que necesita"));
 
+		//mostramos los datos de la instancia creada//
 		JOptionPane.showMessageDialog(null, "\nLa marca de su vehiculo es: " + cochemaria.getMarca() + "\nEl modelo de su vehiculo es: " 
 				+ cochemaria.getModelo() + "\nEl año de compra de su vehiculo es: " + cochemaria.getAño() + "\nEl tipo de combustible necesario para su vehiculo es: " 
 				+ cochemaria.getTipoDeCombustible());
