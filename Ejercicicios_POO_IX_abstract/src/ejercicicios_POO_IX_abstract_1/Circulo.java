@@ -1,22 +1,15 @@
 package ejercicicios_POO_IX_abstract_1;
 
-public class Circulo extends FiguraGeometrica{
+public class Circulo extends FiguraGeometrica {
 
-	
-	double radio;
-	
-	
-	
-	public Circulo(double x, double y, double radio) {
-		super(x, y);
+	private double radio;
+
+	public Circulo(double radio) {
 		this.radio = radio;
-		
 	}
 
-
-
-	@Override
-	public abstract double calcularArea() {
-		double resultado = (this.radio * this.radio)* PI.math;
+	public double calcularArea() {
+		return Math.PI * radio * radio;
 	}
+
 }

@@ -4,16 +4,15 @@ public class Rectangulo extends FiguraGeometrica{
 	double largo;
 	double ancho;
 	
-	
-
-	public Rectangulo(double x, double y, double largo, double ancho) {
-		super(x, y);
-		this.largo = largo;
+	public Rectangulo(double ancho, double largo) {
 		this.ancho = ancho;
+		this.largo = largo;
 	}
-
-	@Override
-	public abstract double calcularArea() {
-		double resultado = largo * ancho;
+ 
+	public double calcularArea() {
+		return largo * ancho;
 	}
 }
+ 
+
+	
