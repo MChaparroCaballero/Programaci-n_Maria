@@ -72,6 +72,7 @@ public class Pruebas {
 			// sale del menu de opciones//
 			JOptionPane.showMessageDialog(null, "adios");
 			break;
+			//555//
 		}
 	}
 
