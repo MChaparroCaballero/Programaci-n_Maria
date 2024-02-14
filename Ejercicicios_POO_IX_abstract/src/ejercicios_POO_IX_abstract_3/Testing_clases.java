@@ -8,7 +8,7 @@ public class Testing_clases {
 		
 		//variables para bucle random y para switch de que animal quieres//
 		int x = 0;
-		int eleccion = Integer.parseInt(JOptionPane.showInputDialog(null, "\n1)Gato" + "\n2)Perro "));
+		int eleccion = Integer.parseInt(JOptionPane.showInputDialog(null, "\n1)😸 Gato" + "\n2)🐶 Perro"));
 
 		switch (eleccion) {
 		case 1:
@@ -42,7 +42,7 @@ public class Testing_clases {
 
 			while (x < 3) {
 				int opcion = Integer.parseInt(
-						JOptionPane.showInputDialog(null, "\n1)Atacar" + "\n2)Hacer sonido " + "\n3)Salir por patas"));
+						JOptionPane.showInputDialog(null, "\n1)Reacciona" + "\n2)Hacer sonido " + "\n3)Salir por patas"));
 				switch (opcion) {
 				case 1:
 					Piti.moverse();

@@ -13,13 +13,13 @@ public Gato(String nombre){
 }
 @Override
 public void hacerSonido() {
-	String sonido = "MEOWWWW!";
+	String sonido = "MEOWWWW!🎶";
 	JOptionPane.showMessageDialog(null, sonido);
 	
 }
 @Override
 public void moverse() {
-	String movivimiento_sexy= "Ataque arañazo";
+	String movivimiento_sexy= "Ataque arañazo 😼";
 	JOptionPane.showMessageDialog(null, movivimiento_sexy);
 }
 

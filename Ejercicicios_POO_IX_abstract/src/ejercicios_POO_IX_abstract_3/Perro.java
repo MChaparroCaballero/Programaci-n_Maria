@@ -15,13 +15,13 @@ public Perro(String nombre, String dueño) {
 
 @Override
 public void hacerSonido() {
-	String sonido = "WOOOF!";
+	String sonido = "WOOOF!🗯";
 	JOptionPane.showMessageDialog(null, sonido);
 }
 
 @Override
 public void moverse() {
-	String movimiento = "ataque mordida";
+	String movimiento = "Se persigue la cola 💨";
 	JOptionPane.showMessageDialog(null, movimiento);
 }
 }
