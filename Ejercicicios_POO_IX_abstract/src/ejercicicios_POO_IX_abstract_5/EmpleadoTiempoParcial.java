@@ -20,7 +20,7 @@ public class EmpleadoTiempoParcial extends Empleado{
 	public void calcularSalario() {//adaptamos el metodo de calculo de salario//
 		double plus_horas_complementarias= horas_complementarias * 20;
 		salario = plus_horas_complementarias + salario;
-		JOptionPane.showMessageDialog(null, "\nNombre: "+ nombre + "\nSalario :" + salario);
+		JOptionPane.showMessageDialog(null, "\nNombre: "+ nombre + "\n 💲Salario :" + salario);
 		
 	}
 }

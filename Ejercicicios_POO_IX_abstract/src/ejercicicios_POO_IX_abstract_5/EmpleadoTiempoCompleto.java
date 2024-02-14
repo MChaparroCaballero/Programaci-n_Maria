@@ -17,7 +17,7 @@ public EmpleadoTiempoCompleto(String nombre, int horas_extras) {//constructor//
 public void calcularSalario() {//adaptamos el metodo calcular salario//
 	double plus_horas_extras =  horas_extras * 50;
 	salario = salario +  plus_horas_extras ;
-	JOptionPane.showMessageDialog(null, "\nNombre: "+ nombre + "\nSalario :" + salario);
+	JOptionPane.showMessageDialog(null, "\nNombre: "+ nombre + "\n🤑 Salario :" + salario);
 }
 
 }
