@@ -12,10 +12,9 @@ public Rectangulo(double ancho, double altura) {
 	 
 }
 
-public Rectangulo(double ancho, double altura, double area) {
+public Rectangulo(double ancho, int altura) {
 	 this.ancho=ancho;
-	 area= ancho*altura;
-	 this.altura=area;
+	 this.altura=altura;
 	 
 	 
 }
