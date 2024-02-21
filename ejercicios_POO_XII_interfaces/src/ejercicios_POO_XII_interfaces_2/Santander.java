@@ -13,9 +13,12 @@ public class Santander implements ProcesadorPago {
 	public void realizarPago() {
 		String pinI = JOptionPane.showInputDialog("\nIntroduzca el pin de la tarjeta");
 
+		//comprobamos que el pin de la tarjeta coincida con el que itnroduce si funciona le deja hacer pagos//
 		if (contra.equals(pinI)) {
+			//mostramso el dinero en cuenta antes de hacer la transacción//
 			JOptionPane.showMessageDialog(null,  "\nDinero en cuenta: "
 					+ Santander.dinero);
+			//actualizamo el dinero en cuenta//
 			Santander.dinero = Santander.dinero - cantidad;
 			JOptionPane.showMessageDialog(null,
 					"\nCantidad de Transaccion: " + cantidad + "\nDinero en cuenta: " + Santander.dinero);
@@ -27,6 +30,7 @@ public class Santander implements ProcesadorPago {
 
 	@Override
 	public void reembolsarPago() {
+		//actualizamos el dinero en cuenta//
 		Santander.dinero=Santander.dinero + cantidad;
 		 JOptionPane.showMessageDialog(null,"Reembolso realizado" +"\nDinero en cuenta: "
 					+ Santander.dinero);
