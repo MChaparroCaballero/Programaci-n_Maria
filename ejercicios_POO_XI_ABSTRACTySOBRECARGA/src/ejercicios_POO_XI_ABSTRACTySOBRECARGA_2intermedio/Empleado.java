@@ -12,7 +12,7 @@ public abstract class Empleado {
 		this.salario = salario;
 	}
 
-	public abstract void CalcularSalario();
+	public abstract double CalcularSalario();
 
 	public abstract void MostrarDetalles();
 

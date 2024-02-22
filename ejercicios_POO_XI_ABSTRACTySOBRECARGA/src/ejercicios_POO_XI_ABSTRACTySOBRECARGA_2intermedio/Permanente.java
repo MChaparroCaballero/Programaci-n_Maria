@@ -1,12 +1,12 @@
 package ejercicios_POO_XI_ABSTRACTySOBRECARGA_2intermedio;
-
+import javax.swing.JOptionPane;
 public class Permanente extends Empleado {
 
 	double complemento;
 
 	public Permanente(String nombre, int id, double salario) {
 		super(nombre, id, salario);
-		// TODO Auto-generated constructor stub
+		// constrcutor basico//
 	}
 
 	
@@ -16,17 +16,7 @@ public class Permanente extends Empleado {
 	}
 
 
-	@Override
-	public void CalcularSalario() {
-		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public void MostrarDetalles() {
-		// TODO Auto-generated method stub
-
-	}
 
 
 	public double getComplemento() {
@@ -38,5 +28,16 @@ public class Permanente extends Empleado {
 		this.complemento = complemento;
 	}
 
-	
+	@Override
+	public double CalcularSalario() {
+		setSalario(getSalario() + complemento);
+		return getSalario();
+
+	}
+
+	@Override
+	public void MostrarDetalles() {
+		JOptionPane.showMessageDialog(null, "\nTipo : Permanente "+ "\nNombre: " + getNombre() + "\nID: " + getId() + "\nSalario: " + getSalario() + "\nComplementos: " + complemento);
+
+	}
 }
