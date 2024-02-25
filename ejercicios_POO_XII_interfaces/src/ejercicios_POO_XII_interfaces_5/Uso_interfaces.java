@@ -6,6 +6,10 @@ public class Uso_interfaces {
 		Datos excel = new Datos();
 		excel.filtrar();
 		excel.ordenar();
+		
+		Datos word = new Datos();
+		word.filtrar();
+		word.ordenar();
 	}
 
 }
