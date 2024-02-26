@@ -8,7 +8,7 @@ public abstract class FigurasGeometricas {
 		this.lado1 = lado1;
 	}
 
-	public double getLado1() {//getter//
+	public double getLado1() {//getter //
 		return lado1;
 	}
 

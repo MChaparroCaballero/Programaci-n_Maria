@@ -28,7 +28,7 @@ public class Ejer_02_abstract {
 		lista.add(new Circulo(10));
 		
 		for(FigurasGeometricas p : lista) {
-			//imprimimos formatos a no se. 2 decimas //
+			//imprimimos formatos a no se. 2 decimas w//
 			System.out.printf("area=%.2f perimetro=%.2f s\n",
 					p.area() , + p.perimetro(), p);
 		}

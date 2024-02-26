@@ -10,7 +10,7 @@ public class Circulo extends FigurasGeometricas {
 
 	@Override
 	public double area() {
-		// adaptamos el metodo area//
+		// adaptamos el metodo area //
 		return Math.PI*Math.pow(lado1, 2);
 	}
 

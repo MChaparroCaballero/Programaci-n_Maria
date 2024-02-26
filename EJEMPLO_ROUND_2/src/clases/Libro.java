@@ -39,7 +39,7 @@ public class Libro {
 		Año = año;
 	}
 
-	public int getNumero() {//quitamos el static para poder llamar al getter//
+	public int getNumero() {//quitamos el static para poder llamar al getter //
 		return numero;
 	}
 

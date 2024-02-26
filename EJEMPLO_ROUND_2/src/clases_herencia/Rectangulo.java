@@ -10,7 +10,7 @@ private double lado2;
 }
 
 	@Override
-	public double area() {//adaptamos el metodo//
+	public double area() {//adaptamos el metodo //
 		
 		return Math.pow(lado1, lado2);
 	}
