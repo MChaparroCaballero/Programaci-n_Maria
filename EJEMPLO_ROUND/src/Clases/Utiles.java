@@ -1,7 +1,7 @@
 package Clases;
 
 public class Utiles {
-	public static double redondear(double numero, int ndecimales) {
+	public static double redondear(double numero, int ndecimales) {//edfe//
 
 		double potencia = Math.pow(10, ndecimales);
 		return Math.round(numero * potencia) / potencia;

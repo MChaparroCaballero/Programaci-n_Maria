@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Ejer_02 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {//sdwsf//
 		int tb[]= {1,2,3,4,5};
 		ArrayList<String> lista = new ArrayList <String> ();
 		

@@ -29,7 +29,7 @@ public class Persona {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub //
 		return "Persona [Nombre=" + nombre + ", edad=" + edad + "]";
 	}
 

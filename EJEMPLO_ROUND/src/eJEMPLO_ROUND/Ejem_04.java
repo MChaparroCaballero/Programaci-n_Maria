@@ -9,7 +9,7 @@ public class Ejem_04 {
 	public static void main(String[] args) {
 		//creamos un nuevo arraylist//
 		ArrayList<Persona> lista = new ArrayList<Persona>();
-		//añadimos instancias de la lista de objetos al arraylist//
+		//añadimos instancias de la lista de objetos al arraylist //
 		lista.add(new Persona("Ana",20));
 		lista.add(new Persona("Maria",50));
 		lista.add(new Persona("ines",33));

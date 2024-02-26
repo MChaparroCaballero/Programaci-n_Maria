@@ -7,7 +7,7 @@ public class Ejer_03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList<Persona> lista = new ArrayList<Persona>();
+		ArrayList<Persona> lista = new ArrayList<Persona>();//swdcasf//
 		
 		lista.add(new Persona("Maria",20));
 		lista.add(new Persona("Ana",20));
