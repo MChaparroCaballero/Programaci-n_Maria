@@ -17,6 +17,7 @@ static Scanner sc=new Scanner(System.in);
 			}else {
 				System.out.print("Dime la traducción");
 				ingles=sc.nextLine();
+				lista.put(castellano, ingles);
 			}
 		}
 	}
