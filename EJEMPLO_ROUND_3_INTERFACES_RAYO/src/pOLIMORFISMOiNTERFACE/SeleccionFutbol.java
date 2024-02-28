@@ -5,9 +5,10 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol {
 	protected String nombre;
 	protected String apellidos;
 	protected int edad;
-	//555//
+	//atributos//
 
 	public SeleccionFutbol(int id, String nombre, String apellidos, int edad) {
+		//constructor//
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -15,6 +16,7 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol {
 		this.edad = edad;
 	}
 
+	//getters y setters//
 	public int getId() {
 		return id;
 	}
@@ -47,11 +49,13 @@ public abstract class SeleccionFutbol implements IntegranteSeleccionFutbol {
 		this.edad = edad;
 	}
 
+	//un to string que nos devuelve los datos//
 	@Override
 	public String toString() {
 		return "SeleccionFutbol [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad + "]";
 	}
 
+	//heredamos los metodos de integranteselecciondefutbol y los adaptamos a nuestra clase//
 	@Override
 	public void concentrarse() {
 		System.out.println("Concentrarse (Clase Padre).");

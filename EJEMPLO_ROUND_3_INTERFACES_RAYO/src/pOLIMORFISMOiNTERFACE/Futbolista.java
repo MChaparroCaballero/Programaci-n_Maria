@@ -37,7 +37,7 @@ private String demarcacion;
 	return cadena.toString();
 	}
 	
-	//sobreescribimos los metodos de seleccionfutbol, esto va a cambiar la adapatacion que hace seleccion de futbol de la interface//
+	//sobreescribimos los metodos de seleccionfutbol, esto va a cambiar la adapatacion que hace futbolista de la interface//
 	@Override
 	public void concentrarse() {
 		System.out.println("Concentrarse (Clase Futbolista)");

@@ -10,6 +10,7 @@ public class Inicial {
 		rayo.entrenar();
 		rayo.jugarPartido();
 		rayo.viajar();
+		System.out.println(rayo);
 	}
 
 }
