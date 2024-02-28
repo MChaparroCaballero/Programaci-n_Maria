@@ -32,6 +32,7 @@ private String demarcacion;
 	public String toString() {
 	//hacemos un string buffer es simplemente un buffer que contiene un string el cual puedes eliminar cosas a lo arraylist//
 	StringBuffer cadena= new StringBuffer("F dorsal= "+dorsal+"\n");
+	//append lo que hace es que mete texto individial y lo concatena//
 	cadena.append(" demarcacion=" + demarcacion+"\n");
 	cadena.append(super.toString());
 	return cadena.toString();
