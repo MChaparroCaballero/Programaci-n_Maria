@@ -36,40 +36,44 @@ public class Tiempo {
 		this.segundos = segundos;
 	}
 
-	public static void suma(int s, int m, int h) {
+	public static void suma(int h, int m, int s) {
 
-		segundos = segundos + s;
+		Tiempo.segundos = segundos + s;
 		if (Tiempo.segundos >= 60) {
 			Tiempo.minutos = Tiempo.minutos + 1;
 			Tiempo.segundos = 0;
 		} else {
-
+			Tiempo.segundos= Tiempo.segundos;
 		}
 		Tiempo.minutos = minutos + m;
 
 		if (Tiempo.minutos >= 60) {
 			Tiempo.horas = Tiempo.horas + 1;
 			Tiempo.minutos = 0;
+		}else {
+			Tiempo.minutos= Tiempo.minutos;
 		}
 
 		Tiempo.horas = horas + h;
 
 	}
 	
-	public static void restar(int s, int m, int h) {
+	public static void restar(int h, int m, int s) {
 
 		Tiempo.segundos = segundos - s;
 		if (Tiempo.segundos > 0) {
 			Tiempo.minutos = Tiempo.minutos - 1;
 			Tiempo.segundos = 59;
 		} else {
-
+			Tiempo.segundos= Tiempo.segundos;
 		}
 		Tiempo.minutos = minutos - m;
 
 		if (Tiempo.minutos > 0) {
 			Tiempo.horas = Tiempo.horas - 1;
 			Tiempo.minutos = 59;
+		}else {
+			Tiempo.minutos= Tiempo.minutos;
 		}
 
 		Tiempo.horas = horas - h;
