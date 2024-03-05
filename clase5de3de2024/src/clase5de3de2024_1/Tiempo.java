@@ -43,48 +43,41 @@ public class Tiempo {
 			Tiempo.minutos = Tiempo.minutos + 1;
 			Tiempo.segundos = 0;
 		} else {
-			Tiempo.segundos= Tiempo.segundos;
+			Tiempo.segundos = Tiempo.segundos;
 		}
 		Tiempo.minutos = minutos + m;
 
 		if (Tiempo.minutos >= 60) {
 			Tiempo.horas = Tiempo.horas + 1;
 			Tiempo.minutos = 0;
-		}else {
-			Tiempo.minutos= Tiempo.minutos;
+		} else {
+			Tiempo.minutos = Tiempo.minutos;
 		}
 
 		Tiempo.horas = horas + h;
 
 	}
-	
+
 	public static void restar(int h, int m, int s) {
 
-		Tiempo.segundos = segundos - s;
-		if (Tiempo.segundos > 0) {
-			Tiempo.minutos = Tiempo.minutos - 1;
-			Tiempo.segundos = 59;
-		} else {
-			Tiempo.segundos= Tiempo.segundos;
+		segundos = (Tiempo.segundos + s) + ((Tiempo.horas + h) * 3600) + ((Tiempo.minutos + m) * 60);
+		while (Tiempo.segundos > 0 || Tiempo.minutos > 0 || Tiempo.horas > 0) {
+			while (Tiempo.segundos % 60 == 0) {
+				Tiempo.minutos = +1;
+				if (Tiempo.minutos % 60 == 0) {
+					Tiempo.horas = +1;
+
+				}else {
+					Tiempo.horas=Tiempo.horas;
+				}
+
+			}
 		}
-		Tiempo.minutos = minutos - m;
-
-		if (Tiempo.minutos > 0) {
-			Tiempo.horas = Tiempo.horas - 1;
-			Tiempo.minutos = 59;
-		}else {
-			Tiempo.minutos= Tiempo.minutos;
-		}
-
-		Tiempo.horas = horas - h;
-
 	}
 
 	@Override
-	public String toString()  {
-		return "Tiempo [Horas=" + Tiempo.horas + ", minutos=" + Tiempo.minutos + ", Segundos="
-				+ Tiempo.segundos + "]";
+	public String toString() {
+		return "Tiempo [Horas=" + Tiempo.horas + ", minutos=" + Tiempo.minutos + ", Segundos=" + Tiempo.segundos + "]";
 	}
-	
-	
+
 }

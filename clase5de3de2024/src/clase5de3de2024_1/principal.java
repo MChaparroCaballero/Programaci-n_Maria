@@ -6,7 +6,7 @@ public class principal {
 
 	public static void main(String[] args) {
 		Tiempo nuevo = new Tiempo(10,35,5);
-		Tiempo nuevo2 = new Tiempo(10,35,5);
+		Tiempo nuevo2 = new Tiempo(9,34,4);
 		Scanner sc = new Scanner(System.in);
 		System.out.println("horas");
 		int h = sc.nextInt();
@@ -26,9 +26,9 @@ public class principal {
 		nuevo.suma(h,m,s);
 		System.out.println(nuevo.toString());
 		nuevo2.restar(h2, m2, s2);
-		sc.close();
 		System.out.println(nuevo2.toString());
-
+		sc.close();
+		
 	}
 
 }
