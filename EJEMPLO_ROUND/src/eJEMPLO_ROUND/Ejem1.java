@@ -4,7 +4,7 @@ import Clases.Utiles;
 
 public class Ejem1 {
 
-	public  double redondear(double numero, int ndecimales) {
+	public  double redondear(double numero, int ndecimales) {//sdfse//
 
 		double potencia = Math.pow(10, ndecimales);
 		return Math.round(numero * potencia) / potencia;
