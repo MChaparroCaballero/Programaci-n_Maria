@@ -5,29 +5,15 @@ import java.util.Scanner;
 public class principal {
 
 	public static void main(String[] args) {
-		Tiempo nuevo = new Tiempo(10,35,5);
-		Tiempo nuevo2 = new Tiempo(9,34,4);
-		Scanner sc = new Scanner(System.in);
-		System.out.println("horas");
-		int h = sc.nextInt();
-		System.out.println("minutos");
-		int m= sc.nextInt();
-		System.out.println("segundos");
-		int s =sc.nextInt();
+		Tiempo nuevo = new Tiempo(5,25,30);
+		Tiempo nuevo2 = new Tiempo(2,30,55);
+		Tiempo nuevo3 = new Tiempo(11, 20, 10);
 		
-		System.out.println("horas");
-		int h2 = sc.nextInt();
-		System.out.println("minutos");
-		int m2= sc.nextInt();
-		System.out.println("segundos");
-		int s2 =sc.nextInt();
+		System.out.println(nuevo);
+		System.out.println(nuevo2);
+		System.out.println("La suma de tiempo 1 + tiempo 2= " + nuevo.suma(nuevo2));
+		System.out.println("La resta de tiempo 1 + tiempo 2= " + nuevo.resta(nuevo2));
 		
-		
-		nuevo.suma(h,m,s);
-		System.out.println(nuevo.toString());
-		nuevo2.restar(h2, m2, s2);
-		System.out.println(nuevo2.toString());
-		sc.close();
 		
 	}
 

@@ -1,31 +1,17 @@
 package clase5de3de2024_1;
 
 public class Tiempo {
-	private static int horas;
-	private static int minutos;
-	private static int segundos;
+	private int segundos;
 
-	public Tiempo(int horas, int minutos, int segundos) {
+	public Tiempo(int h, int m, int s) {
 		super();
-		this.horas = horas;
-		this.minutos = minutos;
-		this.segundos = segundos;
+		//PASAMOS TODO A SEGUNDOS//
+		this.segundos = (h*3600) + (m*60) + s;
 	}
 
-	public int getHoras() {
-		return horas;
-	}
-
-	public void setHoras(int horas) {
-		this.horas = horas;
-	}
-
-	public int getMinutos() {
-		return minutos;
-	}
-
-	public void setMinutos(int minutos) {
-		this.minutos = minutos;
+	public Tiempo(int s) {//CONSTRCUTOR PARA LOS METODOS DE SUMA Y RESTA QUE NOS CREAN UN NUEVOOBJETO//
+		super();
+		this.segundos = s;
 	}
 
 	public int getSegundos() {
@@ -36,48 +22,31 @@ public class Tiempo {
 		this.segundos = segundos;
 	}
 
-	public static void suma(int h, int m, int s) {
-
-		Tiempo.segundos = segundos + s;
-		if (Tiempo.segundos >= 60) {
-			Tiempo.minutos = Tiempo.minutos + 1;
-			Tiempo.segundos = 0;
-		} else {
-			Tiempo.segundos = Tiempo.segundos;
-		}
-		Tiempo.minutos = minutos + m;
-
-		if (Tiempo.minutos >= 60) {
-			Tiempo.horas = Tiempo.horas + 1;
-			Tiempo.minutos = 0;
-		} else {
-			Tiempo.minutos = Tiempo.minutos;
-		}
-
-		Tiempo.horas = horas + h;
-
+	public Tiempo suma(Tiempo t) {//sumammos los segundos//
+		return new Tiempo(this.segundos+t.getSegundos());
 	}
-
-	public static void restar(int h, int m, int s) {
-
-		segundos = (Tiempo.segundos + s) + ((Tiempo.horas + h) * 3600) + ((Tiempo.minutos + m) * 60);
-		while (Tiempo.segundos > 0 || Tiempo.minutos > 0 || Tiempo.horas > 0) {
-			while (Tiempo.segundos % 60 == 0) {
-				Tiempo.minutos = +1;
-				if (Tiempo.minutos % 60 == 0) {
-					Tiempo.horas = +1;
-
-				}else {
-					Tiempo.horas=Tiempo.horas;
-				}
+	public Tiempo resta(Tiempo t) {//restamos los segundos con un objeto nuevo//
+		return new Tiempo(this.segundos-t.getSegundos());
+		
 
 			}
-		}
-	}
 
 	@Override
 	public String toString() {
-		return "Tiempo [Horas=" + Tiempo.horas + ", minutos=" + Tiempo.minutos + ", Segundos=" + Tiempo.segundos + "]";
+		//aqui es cuanod hacemos os arrgles d eimpresion aka://
+		//las horas se pasan a enteras y seran los segundos entre 3600//
+		int h=(int) (this.segundos/3600);
+		//los segundos seras igual a el resto entre los segundos partido por 3600//
+		int s=this.segundos%3600;
+		//los minutos se pasa a enteros y seran igual a los segundos [lo que queda despues de hacer las horas] partido por 60//
+		int m= (int)(s/60);
+		//ahora los segundos seras igual a el resto que quedo de los segundos entre 60 aka el resto despues de hacer los minutos//
+		s=s%60;
+		//devolvemos un string//
+		return String.format("Horas=%d Minutos=%d segundos=%d",h,m,s);
 	}
+		
+
+	
 
 }
