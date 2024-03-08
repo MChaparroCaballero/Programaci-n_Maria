@@ -6,12 +6,12 @@ import java.util.ArrayList;
 
 public class principal {
 
-	//hacemos aleatorio//
+	// hacemos aleatorio//
 	public static int alea(int li, int ls) {
 		return (int) (Math.random() * (ls - li + 1)) + li;
 	}
 
-	//para meter fechas validas//
+	// para meter fechas validas//
 	public static LocalDate fecha() {
 		LocalDate fecha = null;
 		while (true) {
@@ -34,15 +34,14 @@ public class principal {
 
 		ArrayList<LocalDate> lista = new ArrayList<LocalDate>();
 
-		
-		for (int i = 0; i<=25; i++) {
+		for (int i = 0; i <= 25; i++) {
 			lista.add(fecha());
 		}
-		
+
 		for (LocalDate elemento : lista) {
 			System.out.println(elemento);
+
 		}
-		
-		
 	}
+
 }
