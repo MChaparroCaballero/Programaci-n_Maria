@@ -28,7 +28,7 @@ static Scanner sc= new Scanner(System.in);
 				System.out.print("Dime la contraseña");
 				contraseña=sc.nextLine();
 				
-				if(lista.get(usuario).compareToIgnoreCase(contraseña)==0){
+				if(lista.get(usuario).compareToIgnoreCase(contraseña)==0){//el get devuelve el value osea el 12345//
 					System.out.println("La contraseña coincide");
 					break;
 				}else {
