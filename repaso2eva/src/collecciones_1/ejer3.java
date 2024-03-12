@@ -29,7 +29,7 @@ class ordenar implements Comparator<Persona>{
 		int n;
 		switch(this.caso){
 		case 1:
-			n = (int)Math.signum(p1.getEdad()-p2.getEdad());
+			n = (int)Math.signum(p1.getEdad()-p2.getEdad());//para hacer la diferencia y que te devuelva por orden de este asc//
 			if(n==0) {
 				return p2.getNombre().compareTo(p1.getNombre());
 			}else {
