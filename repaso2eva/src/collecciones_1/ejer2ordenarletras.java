@@ -20,15 +20,20 @@ public class ejer2ordenarletras {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/*
+		 * Escribe un programa que ordene 10 palabras introducidos por tecladoy
+		 * almacenados en un objeto de la clase ArrayList.
+		 */
 		ArrayList<String> lista = new ArrayList<String>();
-		for (int i = 0; i <= 25; i++) lista.add(palabra());
+		for (int i = 0; i <= 25; i++)
+			lista.add(palabra());
 		Collections.sort(lista);
-		for (String l : lista) System.out.println(l);
-		//para que lo haga a la inversa//
-		Comparator<String> comparador=Collections.reverseOrder();
-		Collections.sort(lista,comparador);
-		
+		for (String l : lista)
+			System.out.println(l);
+		// para que lo haga a la inversa//
+		Comparator<String> comparador = Collections.reverseOrder();
+		Collections.sort(lista, comparador);
+
 	}
 
 }
