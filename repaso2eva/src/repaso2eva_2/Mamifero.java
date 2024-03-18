@@ -1,35 +1,19 @@
 package repaso2eva_2;
 
 public class Mamifero extends Animal {
-	private int patas;
-	private boolean huevos;
-
-	public Mamifero() {
-		super();
-		this.patas = 4;
-		this.huevos = false;
+	  public void amamantar() {
+	        System.out.println("El mamífero está amamantando a sus crías.");
+	    }
+	    
+	    // Método para caminar
+	    @Override
+	    public void moverse() {
+	        System.out.println("El mamífero está caminando.");
+	    }
+	    
+	    // Método para dormir
+	    public void dormir() {
+	        System.out.println("El mamífero está durmiendo.");
+	    }
 	}
 
-	public int getPatas() {
-		return patas;
-	}
-
-	public void setPatas(int patas) {
-		this.patas = patas;
-	}
-
-	public boolean isHuevos() {
-		return huevos;
-	}
-
-	public void setHuevos(boolean huevos) {
-		this.huevos = huevos;
-	}
-
-	@Override
-	public void info() {
-		System.out.print("%5d= " + huevos + patas);
-
-	}
-
-}

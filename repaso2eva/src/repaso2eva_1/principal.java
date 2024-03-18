@@ -17,6 +17,8 @@ public class principal {
 		flota.add(new Coche(1500));
 		flota.add(new Coche(1300));
 		flota.add(new Bicicleta(12));
+		
+		
 
 	}
 
