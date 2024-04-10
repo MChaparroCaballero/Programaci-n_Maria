@@ -48,7 +48,7 @@ public class Ejer03 {
 				/* te busca la palabra y si esta te imprime la linea */
 				if (linea.indexOf(palabra) > -1)
 					c++;
-				int n = cadena.indexOf(palabra);
+				int n = linea.indexOf(palabra);
 				linea = br.readLine();
 
 				while (n > -1) {
