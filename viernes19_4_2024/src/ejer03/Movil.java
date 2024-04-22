@@ -6,6 +6,7 @@ public class Movil extends Terminal {
 
 	private String tarifa;
 	private double costeMinuto;
+	private double coste=0;
 
 	public Movil(String numero, String tarifa) {
 		super(numero);
@@ -23,19 +24,64 @@ public class Movil extends Terminal {
 		default:
 			System.out.println("tarifa invalida");
 		}
-
+		
 	}
+	
+	
+	
+
+	public String getTarifa() {
+		return tarifa;
+	}
+
+
+
+
+	public void setTarifa(String tarifa) {
+		this.tarifa = tarifa;
+	}
+
+
+
+
+	public double getCosteMinuto() {
+		return costeMinuto;
+	}
+
+
+
+
+	public void setCosteMinuto(double costeMinuto) {
+		this.costeMinuto = costeMinuto;
+	}
+
+
+
+
+	public double getCoste() {
+		return coste;
+	}
+
+
+
+
+	public void setCoste(double coste) {
+		this.coste = coste;
+	}
+
+
+
 
 	@Override
 	public void llama(Terminal terminal, int segundos) {
 		super.llama(terminal, segundos);
-		double coste = segundos * this.costeMinuto / 60;
+		this.setCoste(segundos * this.getCosteMinuto() / 60);
 		DecimalFormat df = new DecimalFormat("#0.00");
-		System.out.println("Tarificados " + df.format(coste) + " euros");
+		System.out.println("Tarificados " + df.format(this.getCoste()) + " euros");
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + " - tarificados 0,00 euros";
+		return super.toString() + " - tarificados "+ coste +" euros";
 	}
 }
