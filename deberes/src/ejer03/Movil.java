@@ -51,12 +51,12 @@ public class Movil extends Terminal {
 	
 		
 		if (this.getTarifa().equalsIgnoreCase("rata")) {
-			this.setCoste(this.getCoste() + (((t / 60) * 6) / 100));
+			this.setCoste(this.getCoste() + (t  * 0.001 ));
 
 		} else if (this.getTarifa().equalsIgnoreCase("mono")) {
-			this.setCoste(this.getCoste() + (((t / 60) * 12) / 100));
+			this.setCoste(this.getCoste() + (t  * 0.002 ));
 		} else if (this.getTarifa().equalsIgnoreCase("bisonte")) {
-			this.setCoste(this.getCoste() + (((t / 60) * 30) / 100));
+			this.setCoste(this.getCoste() + (t  * 0.005 ));
 		} else {
 			System.out.print("error tarifa inexistente");
 		}
