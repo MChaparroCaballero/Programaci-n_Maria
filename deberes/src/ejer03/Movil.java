@@ -46,10 +46,13 @@ public class Movil extends Terminal {
 	public void llama(Movil a, int t) {
 		// TODO Auto-generated method stub
 
+		//cambiamos el tiempo a el tiempo de llamada para emisor y receptor//
 		this.setTiempo_conversacion(this.getTiempo_conversacion() + t);
 		a.setTiempo_conversacion(a.getTiempo_conversacion() + t);
 	
 		
+		
+		//cobramos la llamada al emisor, obteniendo segun las tarifas el euro por segundo//
 		if (this.getTarifa().equalsIgnoreCase("rata")) {
 			this.setCoste(this.getCoste() + (t  * 0.001 ));
 

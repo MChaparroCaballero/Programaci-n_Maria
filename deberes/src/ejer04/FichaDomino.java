@@ -30,6 +30,9 @@ public class FichaDomino {
 		return new FichaDomino(lado2, lado1);
 	}
 
+	// comparamos para ver si el alguno de los lados de la primera ficha coincide
+	// con alguno de la segunda, si es asi sera true si no es false asi sabremos si
+	// son capaces de encajar//
 	public boolean encaja(FichaDomino otra) {
 		boolean encajan = false;
 		if (this.getLado1() == otra.getLado1()) {
@@ -50,6 +53,7 @@ public class FichaDomino {
 	@Override
 	public String toString() {
 
+		// en caso de que la ficha sea 0 lo cambiamos a un string//
 		if (lado1 == 0) {
 			String lad1 = " ";
 			return "[" + lad1 + "|" + lado2 + "]";
