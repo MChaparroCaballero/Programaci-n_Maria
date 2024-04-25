@@ -12,6 +12,8 @@ public class Zona {
 	}
 
 	public void vender(int n) {
+		
+		
 		if (this.entradasPorVender == 0) {
 			System.out.println("Lo siento, las entradas para esa zona están agotadas.");
 		} else if (this.entradasPorVender < n) {
