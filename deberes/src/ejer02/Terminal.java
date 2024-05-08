@@ -27,7 +27,7 @@ public class Terminal {
 	}
 
 	public void llama(Terminal a, int t) {
-
+		//cambiamos el tiempo a el tiempo de llamada para emisor y receptor//
 		this.setTiempo_conversacion(this.getTiempo_conversacion() + t);
 		a.setTiempo_conversacion(a.getTiempo_conversacion() + t);
 		
