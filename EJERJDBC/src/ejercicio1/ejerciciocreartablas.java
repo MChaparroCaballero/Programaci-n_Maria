@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -64,8 +65,8 @@ public class ejerciciocreartablas {
 	public static void InsertarTablaArrayList() {
 		int row=0;
 		ArrayList<Empleado> lista = new ArrayList<Empleado>();
-		lista.add(new Empleado("ana",6666,LocalDateTime.of(2000, 10,10)));
-		lista.add(new Empleado("juan",5666,LocalDateTime.of(2020, 11,11)));
+		lista.add(new Empleado("ana",6666,LocalDate.of(2000, 10,10)));
+		lista.add(new Empleado("juan",5666,LocalDate.of(2020, 11,11)));
 		String cadena = "INSERT INTO EMPLEADOS(NOMBRE,SALARIO,FECHA) VALUES(?,?,?)";
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {

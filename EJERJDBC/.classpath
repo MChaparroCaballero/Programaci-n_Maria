@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/msql"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
