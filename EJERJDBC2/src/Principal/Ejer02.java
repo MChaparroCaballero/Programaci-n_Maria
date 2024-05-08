@@ -93,15 +93,8 @@ public class Ejer02 {
 
 	}
 	/*********************************************************************************************************************************/
-	public static void leerfichero() {
-		String fichero= "C;\\empleados.csv";
-		String linea;
-		
-		try(BufferedReader br = ){
-			
-		}
-	}
 	
+		
 	/*******************************************************************************************************************************/
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
