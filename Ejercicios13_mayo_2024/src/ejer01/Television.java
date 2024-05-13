@@ -75,7 +75,7 @@ private boolean sintonizadorTDT;
 		
 		
 		if(a.getResolucion()>40) {
-			pf=(double) (pf+(pf*0.30));
+			pf+=(double) (pf+(pf*0.30));
 		
 		}
 		

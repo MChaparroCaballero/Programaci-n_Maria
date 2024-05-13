@@ -34,16 +34,17 @@ public class Principal {
 				totalTelevisiones += precioFinal;
 				totalElectrodomesticos += precioFinal;
 			} else {
-				precioFinal = Electrodomestico.precioFinal(electrodomesticos[i]);
+				precioFinal += Electrodomestico.precioFinal(electrodomesticos[i]);
 				totalElectrodomesticos += precioFinal;
 			}
-
+			//
+			System.out.println("Precio final: " + precioFinal);
+			System.out.println("Total Electrodomesticos: " + totalElectrodomesticos);
+			System.out.println("Total Lavadoras: " + totalLavadoras);
+			System.out.println("Total Televisiones: " + totalTelevisiones);
 		}
 
-		System.out.println("Precio final: " + precioFinal);
-		System.out.println("Total Electrodomesticos: " + totalElectrodomesticos);
-		System.out.println("Total Lavadoras: " + totalLavadoras);
-		System.out.println("Total Televisiones: " + totalTelevisiones);
+		
 	}
 
 }
