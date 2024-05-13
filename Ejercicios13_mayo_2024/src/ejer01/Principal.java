@@ -26,8 +26,8 @@ public class Principal {
         for (Electrodomestico electrodomestico : electrodomesticos) {
             double precioFinal = electrodomestico.precioFinal();
             if (electrodomestico instanceof Lavadora) {
-            	 totalElectrodomesticos += precioFinal;
             	 totalLavadoras+= precioFinal;
+            	 totalElectrodomesticos += precioFinal;
             } else if (electrodomestico instanceof Television) {
             	 totalElectrodomesticos += precioFinal;
             	 totalTelevisiones+= precioFinal;

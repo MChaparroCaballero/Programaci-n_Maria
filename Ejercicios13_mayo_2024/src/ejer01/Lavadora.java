@@ -35,11 +35,12 @@ public class Lavadora extends Electrodomestico {
 	
 	
 	
-	public double precioFinal(Lavadora a) {
+	@Override
+	public double precioFinal() {
 		// TODO Auto-generated method stub
 		double pf=super.precioFinal();
-	
-		if(a.getCarga()>30) {
+		
+		if(this.getCarga()>30) {
 			pf=pf+50;
 			
 		}else {
@@ -48,8 +49,6 @@ public class Lavadora extends Electrodomestico {
 		return pf;
 		}
 	
-
-
 
 	public double getCarga() {
 		return carga;

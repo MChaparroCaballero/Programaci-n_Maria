@@ -33,7 +33,8 @@ private boolean sintonizadorTDT;
 		this.sintonizadorTDT=false;
 	}
 
-	
+
+	@Override
 	public double precioFinal() {
 		// TODO Auto-generated method stub
 		double pf=super.precioFinal();
@@ -53,7 +54,6 @@ private boolean sintonizadorTDT;
 		}
 		
 		return pf;
-		
 	}
 
 	public double getResolucion() {
