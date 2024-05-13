@@ -75,12 +75,12 @@ private boolean sintonizadorTDT;
 		
 		
 		if(a.getResolucion()>40) {
-			pf+=(double) (pf+(pf*0.30));
+			pf=(double) pf+(pf+(pf*0.30));
 		
 		}
 		
 		if(a.isSintonizadorTDT()==true) {
-			pf+=50;
+			pf=pf+50;
 		}
 		
 		return pf+a.getPrecio_base()+pp+pc;
