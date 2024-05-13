@@ -44,23 +44,20 @@ public class Electrodomestico {
 	}
 	
 	
-	public ComprovarConsumoEnergetico(char miConsumo2) {
+	public ConsumoEnergetico ComprovarConsumoEnergetico(char miConsumo2) {
 		String letra = Character.toString(miConsumo2);
 		for(ConsumoEnergetico e:ConsumoEnergetico.values())
-			if(e.toString().equalsIgnoreCase(letra)){
-				return letra.toCharArray();
-			}else {
-				
-			}
+			if(e.toString().equalsIgnoreCase(letra))return e;
 		
+		return ConsumoEnergetico.F;
 	}
 	
-	public String ComprovarColor(String color2) {
+	public Colores ComprovarColor(String color2) {
 		for(Colores b:Colores.values())
 			if(b.toString().equalsIgnoreCase(color2)) {
-				return b.toString();
+				return b;
 			}
-		return color2;
+		return Colores.BLANCO;
 		
 	}
 	
