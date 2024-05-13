@@ -61,11 +61,11 @@ public class Electrodomestico {
 		
 	}
 	
-	public double precioFinal() {
+	public static double precioFinal(Electrodomestico a) {
 		int pc=0;
 		int pp=0;
 		int pf=0;
-		switch(this.getMiConsumo()) {
+		switch(a.getMiConsumo()) {
 		case F:
 			pc=10;
 			break;
@@ -87,19 +87,19 @@ public class Electrodomestico {
 		
 		
 		}
-		if(this.getPeso()>=0 && this.getPeso()<=19) {
+		if(a.getPeso()>=0 && a.getPeso()<=19) {
 			pp=10;
-		}else if(this.getPeso()<=49 && this.getPeso()>=20){
+		}else if(a.getPeso()<=49 && a.getPeso()>=20){
 			pp=50;
-		}else if(this.getPeso()<=79 && this.getPeso()>=50) {
+		}else if(a.getPeso()<=79 && a.getPeso()>=50) {
 			pp=80;
-		}else if(this.getPeso()>=80) {
+		}else if(a.getPeso()>=80) {
 			pp=100;
 		}else {
 			System.out.println("invalido");
 		}
 		
-		pf=(int) (this.getPrecio_base()+pp+pc);
+		pf=(int) (a.getPrecio_base()+pp+pc);
 		return pf;
 		
 	}

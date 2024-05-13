@@ -34,26 +34,56 @@ private boolean sintonizadorTDT;
 	}
 
 
-	@Override
-	public double precioFinal() {
+	public static double precioFinal(Television a) {
 		// TODO Auto-generated method stub
-		double pf=super.precioFinal();
+		int pc=0;
+		int pp=0;
+		double pf=0;
+		switch(a.getMiConsumo()) {
+		case F:
+			pc=10;
+			break;
+		case A:
+			pc=100;
+			break;
+		case B:
+			pc=80;
+			break;
+		case C:
+			pc=60;
+			break;
+		case D:
+			pc=50;
+			break;
+		case E:
+			pc=30;
+			break;
 		
-		if(this.getResolucion()>40) {
-			pf=pf+(pf*0.30);
 		
+		}
+		if(a.getPeso()>=0 && a.getPeso()<=19) {
+			pp=10;
+		}else if(a.getPeso()<=49 && a.getPeso()>=20){
+			pp=50;
+		}else if(a.getPeso()<=79 && a.getPeso()>=50) {
+			pp=80;
+		}else if(a.getPeso()>=80) {
+			pp=100;
 		}else {
-			pf=pf;
-			
+			System.out.println("invalido");
 		}
 		
-		if(this.isSintonizadorTDT()==true) {
+		
+		if(a.getResolucion()>40) {
+			pf=(double) (pf+(pf*0.30));
+		
+		}
+		
+		if(a.isSintonizadorTDT()==true) {
 			pf+=50;
-		}else {
-			pf=pf;
 		}
 		
-		return pf;
+		return pf+a.getPrecio_base()+pp+pc;
 	}
 
 	public double getResolucion() {
