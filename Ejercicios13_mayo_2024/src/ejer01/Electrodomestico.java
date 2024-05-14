@@ -61,7 +61,7 @@ public class Electrodomestico {
 		
 	}
 	
-	public static double precioFinal(Electrodomestico a) {
+	public static  double precioFinal(Electrodomestico a) {
 		int pc=0;
 		int pp=0;
 		int pf=0;

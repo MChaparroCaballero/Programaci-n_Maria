@@ -9,6 +9,7 @@ public class Principal {
 		electrodomesticos[0] = new Lavadora(200, 20, 25, "rojo", 'F');
 		electrodomesticos[1] = new Lavadora(200, 20, 25, "rojo", 'F');
 		electrodomesticos[2] = new Television(430, 15, 50, true, "negro", 'F');
+		
 		electrodomesticos[3] = new Electrodomestico(120, 8, "gris", 'D');
 		electrodomesticos[4] = new Lavadora(300, 30, 35, "blanco", 'E');
 		electrodomesticos[5] = new Television(700, 40, 60, false, "azul", 'C');
@@ -24,7 +25,7 @@ public class Principal {
 
 		for (int i = 0; i < electrodomesticos.length; i++) {
 			if (electrodomesticos[i] instanceof Lavadora) {
-				precioFinal = Lavadora.precioFinal(electrodomesticos[i]);
+				precioFinal = Lavadora.precioFinal(electrodomesticos[i]);		
 				totalLavadoras += precioFinal;
 			} else if(electrodomesticos[i] instanceof Television) {
 				precioFinal = Television.precioFinal(electrodomesticos[i]);
