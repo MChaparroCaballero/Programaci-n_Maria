@@ -4,136 +4,111 @@ import ejer01.ejemploEnum.Colores;
 import ejer01.ejemploEnum.ConsumoEnergetico;
 
 public class Electrodomestico {
-	
-	
-	public static enum Colores{BLANCO,NEGRO,ROJO,AZUL,GRIS};
-	public static enum ConsumoElectronico{A,B,C,D,E,F};
+
+	public static enum Colores {
+		BLANCO, NEGRO, ROJO, AZUL, GRIS
+	};
+
+	public static enum ConsumoEnergetico {
+		A, B, C, D, E, F
+	};
+
 	protected double precio_base;
-	protected double peso;
+	protected int peso;
 	protected Colores color;
-	protected ConsumoElectronico miConsumo;
-	
-	
-	
-	
+	protected ConsumoEnergetico miConsumo;
+
 	public Electrodomestico() {
 		super();
 		this.precio_base = 100;
 		this.peso = 5;
 		this.color = Colores.BLANCO;
-		this.miConsumo = ConsumoElectronico.F;
+		this.miConsumo = ConsumoEnergetico.F;
 	}
-	
-	
-	
-	public Electrodomestico(double precio_base, double peso) {
+
+	public Electrodomestico(double precio_base, int peso) {
 		super();
 		this.precio_base = precio_base;
 		this.peso = peso;
 		this.color = Colores.BLANCO;
-		this.miConsumo = ConsumoElectronico.F;
+		this.miConsumo = ConsumoEnergetico.F;
 	}
 
-
-	public Electrodomestico(double precio_base, double peso, String color, char miConsumo) {
+	public Electrodomestico(double precio_base, int peso, String color, char letra) {
 		super();
 		this.precio_base = precio_base;
 		this.peso = peso;
 		this.color = ComprovarColor(color);
-		this.miConsumo = ComprovarConsumoEnergetico(miConsumo);
+		this.miConsumo = ComprovarConsumoEnergetico(letra);
 	}
-	
-	
-	public ConsumoElectronico ComprovarConsumoEnergetico(char miConsumo2) {
+
+	public ConsumoEnergetico ComprovarConsumoEnergetico(char miConsumo2) {
 		String letra = Character.toString(miConsumo2);
-		for(ConsumoElectronico e:ConsumoElectronico.values())
-			if(e.toString().equalsIgnoreCase(letra))return e;
-		
-		return ConsumoElectronico.F;
+		for (ConsumoEnergetico e : ConsumoEnergetico.values())
+			if (e.toString().equalsIgnoreCase(letra))
+				return e;
+
+		return ConsumoEnergetico.F;
 	}
-	
+
 	public Colores ComprovarColor(String color2) {
-		for(Colores b:Colores.values())
-			if(b.toString().equalsIgnoreCase(color2)) {
+		for (Colores b : Colores.values())
+			if (b.toString().equalsIgnoreCase(color2)) {
 				return b;
 			}
 		return Colores.BLANCO;
-		
+
 	}
-	
-	public static  double precioFinal(Electrodomestico a) {
-		int pc=0;
-		int pp=0;
-		int pf=0;
-		switch(a.getMiConsumo()) {
-		case F:
-			pc=10;
-			break;
-		case A:
-			pc=100;
-			break;
-		case B:
-			pc=80;
-			break;
-		case C:
-			pc=60;
-			break;
-		case D:
-			pc=50;
-			break;
-		case E:
-			pc=30;
-			break;
-		
-		
+
+	public double precioFinal() {
+		int tb[] = { 100, 80, 60, 50, 30, 10 };
+		double precioFinal = this.precio_base;
+		precioFinal += tb[miConsumo.ordinal()];
+
+		if (this.peso >= 0 && this.peso <= 19) {
+			precioFinal += 10;
+		} else if (this.peso >= 20 && this.peso <= 49) {
+			precioFinal += 50;
+		} else if (this.peso >= 50 && this.peso <= 79) {
+			precioFinal += 80;
+		} else if (this.peso >= 80) {
+			precioFinal += 100;
 		}
-		if(a.getPeso()>=0 && a.getPeso()<=19) {
-			pp=10;
-		}else if(a.getPeso()<=49 && a.getPeso()>=20){
-			pp=50;
-		}else if(a.getPeso()<=79 && a.getPeso()>=50) {
-			pp=80;
-		}else if(a.getPeso()>=80) {
-			pp=100;
-		}else {
-			System.out.println("invalido");
-		}
-		
-		pf=(int) (a.getPrecio_base()+pp+pc);
-		return pf;
-		
+
+		return precioFinal;
+
 	}
-	
 
 	public double getPrecio_base() {
 		return precio_base;
 	}
+
 	public void setPrecio_base(double precio_base) {
 		this.precio_base = precio_base;
 	}
-	public double getPeso() {
+
+	public int getPeso() {
 		return peso;
 	}
-	public void setPeso(double peso) {
+
+	public void setPeso(int peso) {
 		this.peso = peso;
 	}
+
 	public Colores getColor() {
 		return color;
 	}
+
 	public void setColor(Colores color) {
 		this.color = color;
 	}
-	public ConsumoElectronico getMiConsumo() {
+
+	public ConsumoEnergetico getMiConsumo() {
 		return miConsumo;
 	}
-	public void setMiConsumo(ConsumoElectronico miConsumo) {
+
+	public void setMiConsumo(ConsumoEnergetico miConsumo) {
 		this.miConsumo = miConsumo;
 	}
-
-
-
-
-
-
 
 }
