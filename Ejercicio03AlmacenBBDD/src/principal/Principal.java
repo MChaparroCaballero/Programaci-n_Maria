@@ -83,8 +83,6 @@ public class Principal {
 
 	}
 
-	
-
 	public static void listado() {
 
 		String cadena = "SELECT * FROM ARTICULOS";
@@ -133,8 +131,9 @@ public class Principal {
 
 		/********************************************/
 		String cadena = "INSERT INTO ARTICULOS(DESCRIPCION,PRECIO_DE_COMPRA,PRECIO_DE_VENTA,STOCK) VALUES(?,?,?,?)";
-		//siempre que no actualizamos todos los interrogantes poenmos los interrogante//
-		//si es actualizar lo ponemos asi//
+		// siempre que no actualizamos todos los interrogantes poenmos los
+		// interrogante//
+		// si es actualizar lo ponemos asi//
 		int row = 0;
 		// las interrogantes simbolizan cada una un campo//
 		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/GESTISIMAL", "root", "ROOT");
@@ -157,6 +156,115 @@ public class Principal {
 		}
 	}
 
+	public static void baja() {
+
+		// las variables de campos que cabiamos, como tenemos autoincementane la de id
+		// es opcional lo unico que cambiaria es que quitas una interrogante//
+		int stock;
+		String descripcion;
+		double Preciocompra, Precioventa;
+		/********************************************/
+		System.out.print("cual quieres eliminar que tiene que campo");
+		String campo = (sc.nextLine()).toUpperCase();
+		System.out.print("con que valor");
+
+		if (campo == "ID") {
+			int valor = Integer.valueOf(sc.nextLine());
+			String cadena = "DELETE FROM ARTICULOS WHERE" + campo + "=" + valor;
+			// siempre que no actualizamos todos los interrogantes poenmos los
+			// interrogante//
+			// si es actualizar lo ponemos asi//
+			int row = 0;
+			// las interrogantes simbolizan cada una un campo//
+			try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/GESTISIMAL", "root", "ROOT");
+					PreparedStatement sentencia = con.prepareStatement(cadena);) {
+				row += sentencia.executeUpdate();// nos da el numero de filas actualizadas,//
+				System.out.println("El numero de registros eliminados es " + row);
+
+			} catch (SQLException f) {
+				System.out.println(f.getMessage());
+			} catch (Exception z) {
+				System.out.println(z.getMessage());
+			}
+		} else if (campo == "DESCRIPCION") {
+			String valor = sc.nextLine();
+			String cadena = "DELETE FROM ARTICULOS WHERE" + campo + "=" + valor;
+			// siempre que no actualizamos todos los interrogantes poenmos los
+			// interrogante//
+			// si es actualizar lo ponemos asi//
+			int row = 0;
+			// las interrogantes simbolizan cada una un campo//
+			try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/GESTISIMAL", "root", "ROOT");
+					PreparedStatement sentencia = con.prepareStatement(cadena);) {
+				row += sentencia.executeUpdate();// nos da el numero de filas actualizadas,//
+				System.out.println("El numero de registros eliminados es " + row);
+
+			} catch (SQLException f) {
+				System.out.println(f.getMessage());
+			} catch (Exception z) {
+				System.out.println(z.getMessage());
+			}
+		} else if (campo == "PRECIO_DE_COMPRA") {
+			double valor = Double.valueOf(sc.nextLine());
+			String cadena = "DELETE FROM ARTICULOS WHERE" + campo + "=" + valor;
+			// siempre que no actualizamos todos los interrogantes poenmos los
+			// interrogante//
+			// si es actualizar lo ponemos asi//
+			int row = 0;
+			// las interrogantes simbolizan cada una un campo//
+			try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/GESTISIMAL", "root", "ROOT");
+					PreparedStatement sentencia = con.prepareStatement(cadena);) {
+				row += sentencia.executeUpdate();// nos da el numero de filas actualizadas,//
+				System.out.println("El numero de registros eliminados es " + row);
+
+			} catch (SQLException f) {
+				System.out.println(f.getMessage());
+			} catch (Exception z) {
+				System.out.println(z.getMessage());
+			}
+		} else if (campo == "PRECIO_DE_VENTA") {
+			double valor = Double.valueOf(sc.nextLine());
+			String cadena = "DELETE FROM ARTICULOS WHERE" + campo + "=" + valor;
+			// siempre que no actualizamos todos los interrogantes poenmos los
+			// interrogante//
+			// si es actualizar lo ponemos asi//
+			int row = 0;
+			// las interrogantes simbolizan cada una un campo//
+			try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/GESTISIMAL", "root", "ROOT");
+					PreparedStatement sentencia = con.prepareStatement(cadena);) {
+				row += sentencia.executeUpdate();// nos da el numero de filas actualizadas,//
+				System.out.println("El numero de registros eliminados es " + row);
+
+			} catch (SQLException f) {
+				System.out.println(f.getMessage());
+			} catch (Exception z) {
+				System.out.println(z.getMessage());
+			}
+		} else if (campo == "STOCK") {
+			int valor = Integer.valueOf(sc.nextLine());
+			String cadena = "DELETE FROM ARTICULOS WHERE" + campo + "=" + valor;
+			// siempre que no actualizamos todos los interrogantes poenmos los
+			// interrogante//
+			// si es actualizar lo ponemos asi//
+			int row = 0;
+			// las interrogantes simbolizan cada una un campo//
+			try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/GESTISIMAL", "root", "ROOT");
+					PreparedStatement sentencia = con.prepareStatement(cadena);) {
+				row += sentencia.executeUpdate();// nos da el numero de filas actualizadas,//
+				System.out.println("El numero de registros eliminados es " + row);
+
+			} catch (SQLException f) {
+				System.out.println(f.getMessage());
+			} catch (Exception z) {
+				System.out.println(z.getMessage());
+			}
+		} else {
+			System.out.print("error");
+		}
+
+		/********************************************/
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// CrearBBDD();//
@@ -176,6 +284,9 @@ public class Principal {
 			case 2:
 				alta();
 				break;
+
+			case 3:
+				baja();
 
 			}
 		} while (op != opciones.length);

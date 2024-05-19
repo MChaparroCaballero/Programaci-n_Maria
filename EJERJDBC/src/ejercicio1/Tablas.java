@@ -19,7 +19,7 @@ public class Tablas {
 		String cadena = "CREATE TABLE MONEDERO( " + "MONEDA DECIMAL(10,2), " + "CANTIDAD INT, " + "PRIMARY KEY(MONEDA) "
 				+ ")";
 
-		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "ROOT");
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {
 			sentencia.execute();
 			System.out.println("TABLA CREADA");
@@ -36,7 +36,7 @@ public class Tablas {
 		int tb[] = { 5, 2, 1 }, row = 0;
 		String cadena = "insert into monedero values(?,?)";
 
-		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "ROOT");
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {
 
 			for (int i = -2; i <= 2; i++) { // Para que de 0.05, 0.02,0.01, se eleva a -2
@@ -62,7 +62,7 @@ public class Tablas {
 		System.out.println(cadena);
 		cadena = cadena.replace(",", ".");// Para cambiar comas por puntos
 
-		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "ROOT");
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {
 			int row = sentencia.executeUpdate();
 			System.out.println("Numero de filas borradas " + row);
@@ -81,7 +81,7 @@ public class Tablas {
 		System.out.println(cadena);
 		cadena = cadena.replace(",", ".");// Para cambiar comas por puntos
 
-		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "ROOT");
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {
 			sentencia.setDouble(1, li);
 			sentencia.setDouble(2, ls);
@@ -101,7 +101,7 @@ public class Tablas {
 		String cadena = "UPDATE MONEDERO SET CANTIDAD=CANTIDAD + ?";
 		cadena = cadena.replace(",", ".");// Para cambiar comas por puntos
 
-		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "ROOT");
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {
 			sentencia.setDouble(1, incremento);
 			int row = sentencia.executeUpdate();
@@ -120,7 +120,7 @@ public class Tablas {
 		String cadena = "SELECT * FROM MONEDERO";
 		cadena = cadena.replace(",", ".");// Para cambiar comas por puntos
 
-		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "ROOT");
+		try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CLASELINKIAFP", "root", "root");
 				PreparedStatement sentencia = con.prepareStatement(cadena);) {
 			ResultSet resultado = sentencia.executeQuery();
 			while (resultado.next()) {
