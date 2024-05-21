@@ -1,6 +1,6 @@
 package Ejercicio01;
 
-public class Videojuego implements Entregable{
+public class Videojuego implements Entregable,Comparable{
 private String titulo;
 private int horasestimadas;
 private boolean entregado;
@@ -55,11 +55,7 @@ public String getCompañia() {
 public void setCompañia(String compañia) {
 	this.compañia = compañia;
 }
-@Override
-public String toString() {
-	// TODO Auto-generated method stub
-	return super.toString();
-}
+
 @Override
 public void entregar() {
 	this.entregado = true;
@@ -74,6 +70,19 @@ public void devolver() {
 public boolean isEntregado() {
 	// TODO Auto-generated method stub
 	return this.entregado;
+}
+
+
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return "videojuego: Titulo" + titulo + " horas estimadas" + horasestimadas + "Entregado" + entregado + "genero" + genero
+			+ "compañia" + compañia;
+}
+@Override
+public int compareTo(Object o) {
+	Videojuego v= (Videojuego) o;
+	return this.horasestimadas-v.getHorasestimadas();
 }
 
 

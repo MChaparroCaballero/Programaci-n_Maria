@@ -83,9 +83,19 @@ public class Serie implements Entregable, Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		Serie s=(Serie)o;
-		return this.Temporadas-s.getTemporadas();
+	public int compareTo(Object o) {// le pasamos un objeto que es otro//
+		Serie s = (Serie) o;// hacemos un casteo del objeto que sea a lo que estamos comparando//
+		// this temporadas es el propio objeto//
+		// comparamos y devolvera un entero//
+
+		// return this.Temporadas-s.getTemporadas(); esto te lo devuelve ascendente mas
+		// chicquitoto a mas grande//
+		int n = s.getTemporadas() - this.Temporadas;// esto lo devuelve descendiente//
+		if (n == 0) {
+			return this.Titulo.compareToIgnoreCase(s.getTitulo());
+		} else {
+			return n;
+		}
 	}
 
 }
