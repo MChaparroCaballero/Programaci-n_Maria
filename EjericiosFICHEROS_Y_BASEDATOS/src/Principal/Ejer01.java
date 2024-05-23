@@ -30,7 +30,7 @@ public class Ejer01 {
 			      al=new Alumno(Integer.valueOf(campos[0]),campos[1],LocalDate.parse(campos[7]));
 			      lista.add(al);	
 				}catch(Exception e) {}
-				linea=br.readLine();
+				linea=br.readLine();//PARA QUE CUANDO LEA SI LEE CABECERA AL INTERTAR CONVERTIR A NUMERO DA ERROR Y LEE LA SIGUIENTE IGUAL PARA LEER LINEAS EN BLANCO//
 			}
 					}catch(Exception e) {
 			System.out.println(e.getMessage());
