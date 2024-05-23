@@ -70,6 +70,49 @@ public class Principal {
 		for (Videojuego l : listav) {
 			System.out.println(l);
 		}
+		
+		
+		/*public static void cargar(Serie l[]) {
+		l[0]=new Serie();
+		l[1]=new Serie("Juego de tronos","Martin");
+		l[2]=new Serie("Los simpsons",3,"Humor","Groening");
+		l[3]=new Serie("Padre de familia",3,"Humor","Ruiz");
+		l[4]=new Serie("Breaking Bad",3,"Thriller","Gilligan");
+	}
+	
+	public static void main(String[] args) {
+		Serie listaSeries[]=new Serie[5];
+		cargar(listaSeries);
+		
+		Arrays.sort(listaSeries);
+		
+		for(Serie l:listaSeries)System.out.println(l);
+		
+		
+		
+		/*Serie temp;
+		boolean cambio=true;
+	
+		 for (int i = 0; i < listaSeries.length && cambio; i++) {
+			    cambio=false;
+	           for (int j = 1; j < (listaSeries.length - i); j++) {
+
+	               if (listaSeries[j - 1].compareTo( listaSeries[j])>0) {
+	                   temp = listaSeries[j - 1];
+	                   listaSeries[j - 1] = listaSeries[j];
+	                   listaSeries[j] = temp;
+	                   cambio=true;
+	               }
+	           }
+	       }
+		
+		for(Serie l:listaSeries)System.out.println(l);
+	  
+		
+	}
+
+}
+*/
 	}
 
 }
