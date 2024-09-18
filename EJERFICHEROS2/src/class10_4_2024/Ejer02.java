@@ -10,7 +10,7 @@ public class Ejer02 {
 
 	public static void main(String[] args) {
 		// crea un programa que cree un fichero y busque una palabra que pides por
-		// pantalla en le fichero y que nos muestre cuantas veces se la encuentra en el
+		// pantalla en le fichero y que nos muestre c uantas veces se la encuentra en el
 		// fichero*/
 
 		
